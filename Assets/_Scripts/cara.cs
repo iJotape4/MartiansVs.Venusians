@@ -5,7 +5,7 @@ using UnityEngine;
 public class cara : MonoBehaviour
 {
 
-    public int Numero;
+    [HideInInspector] public int Numero;
     public bool TocaSuelo;
 
         // Start is called before the first frame update

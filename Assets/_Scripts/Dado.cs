@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Dado : MonoBehaviour
 {
-    public Text texto;
     public cara[] caras;
     public int NumeroActual;
     public Vector3 PosInicial;

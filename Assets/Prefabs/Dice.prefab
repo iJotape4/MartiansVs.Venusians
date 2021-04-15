@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3573238320232294460}
   - component: {fileID: 3573238320232294461}
   m_Layer: 0
-  m_Name: Cara (1)
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d6e9958e82144dbedde165d7c34f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numero: 0
+  Numero: 1
   TocaSuelo: 0
 --- !u!1 &3573238320272763500
 GameObject:
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 3573238320272763501}
   - component: {fileID: 3573238320272763410}
   m_Layer: 0
-  m_Name: Cara (3)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d6e9958e82144dbedde165d7c34f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numero: 0
+  Numero: 3
   TocaSuelo: 0
 --- !u!1 &3573238320494761269
 GameObject:
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 3573238320494761274}
   - component: {fileID: 3573238320494761275}
   m_Layer: 0
-  m_Name: Cara (5)
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d6e9958e82144dbedde165d7c34f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numero: 0
+  Numero: 5
   TocaSuelo: 0
 --- !u!1 &3573238320671120939
 GameObject:
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 3573238320671120936}
   - component: {fileID: 3573238320671120937}
   m_Layer: 0
-  m_Name: Cara (6)
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d6e9958e82144dbedde165d7c34f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numero: 0
+  Numero: 6
   TocaSuelo: 0
 --- !u!1 &3573238320823716312
 GameObject:
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 3573238320823716313}
   - component: {fileID: 3573238320823716318}
   m_Layer: 0
-  m_Name: Cara (2)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d6e9958e82144dbedde165d7c34f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numero: 0
+  Numero: 2
   TocaSuelo: 0
 --- !u!1 &3573238321390949573
 GameObject:
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 3573238321390949578}
   - component: {fileID: 3573238321390949579}
   m_Layer: 0
-  m_Name: Cara (4)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d6e9958e82144dbedde165d7c34f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numero: 0
+  Numero: 4
   TocaSuelo: 0
 --- !u!1 &6969592040515066486
 GameObject:
@@ -369,8 +369,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad93d761f003af41bfeaf9717e0ddbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texto: {fileID: 0}
-  caras: []
+  caras:
+  - {fileID: 3573238320232294461}
+  - {fileID: 3573238320823716318}
+  - {fileID: 3573238320272763410}
+  - {fileID: 3573238321390949579}
+  - {fileID: 3573238320494761275}
+  - {fileID: 3573238320671120937}
   NumeroActual: 0
   PosInicial: {x: 0, y: 0, z: 0}
   moviendo: 0
