@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Movement
 {
     Rigidbody rigidbody;
     public float velocidad;
@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
           rigidbody=GetComponent<Rigidbody>(); 
+          init();
     }
 
     // Update is called once per frame
@@ -23,5 +24,8 @@ public class PlayerController : MonoBehaviour
         float movV=Input.GetAxis("Vertical");
         Vector3 movimiento= new Vector3 (movH,0,movV);
         rigidbody.AddForce(movimiento*velocidad);
+    }
+    void Update (){
+
     }
 }
