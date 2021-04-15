@@ -51,7 +51,7 @@ public class Dado : MonoBehaviour
         transform.position = PosInicial;
         float FuerzaInicial = Random.Range(-10, 10 );
         float FuerzaInicial2 = Random.Range(10, 10);
-        float multplier = Random.Range(10, 10);
+        float multplier = Random.Range(20, 20);
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<Rigidbody>().AddForce(new Vector3(FuerzaInicial * multplier, 0, FuerzaInicial2* multplier));
         GetComponent<Rigidbody>().rotation = Random.rotation;
