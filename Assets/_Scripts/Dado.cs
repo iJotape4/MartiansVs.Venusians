@@ -26,6 +26,10 @@ public class Dado : MonoBehaviour
     void Update()
     {
         IsMoving();
+        if (Input.GetButtonDown("Submit"))
+        {
+            TirarDado();
+        }
     }
 
     void NumeroDado()
