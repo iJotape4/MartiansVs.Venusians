@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tablero
+  - DadosCamara
   layers:
   - Default
   - TransparentFX

@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7513064969573532858}
   m_Layer: 0
-  m_Name: TalberoDeDados
+  m_Name: TableroDeDados
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 7731549230719002784}
   m_Layer: 0
   m_Name: DadosCamara
-  m_TagString: MainCamera
+  m_TagString: DadosCamara
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

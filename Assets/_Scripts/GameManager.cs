@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            TurnoActual += 1;
+           
             NextTurno();
           
         }
@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     {
         NodoTurno = NodoTurno.sig;
         JugadorActual = NodoTurno.info;
+        TurnoActual += 1;
     }
 
     class Nodo
