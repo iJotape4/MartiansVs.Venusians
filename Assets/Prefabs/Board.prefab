@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7025627943978551104}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 9216462205188481663}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 1412283865163772494}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 7463184135862044408}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 3236726907783198543}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 8941319027899045286}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 8764281931689533564}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 2182489673576938768}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 6577038906434769181}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 3566857916957501090}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 1964543978837044709}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,7 +1076,7 @@ GameObject:
   - component: {fileID: 998429389280875702}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 5742476705934264683}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1262,7 +1262,7 @@ GameObject:
   - component: {fileID: 8397781281574571736}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 2059561044129642147}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1448,7 +1448,7 @@ GameObject:
   - component: {fileID: 9066643528837208883}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 1510769392513641822}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 5555820179503235084}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1727,7 +1727,7 @@ GameObject:
   - component: {fileID: 3900481993032110257}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 3175306994534742684}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 6558517902447977693}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2045,7 +2045,7 @@ GameObject:
   - component: {fileID: 9053444336459136347}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2138,7 +2138,7 @@ GameObject:
   - component: {fileID: 2992426506129203879}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2347,7 +2347,7 @@ GameObject:
   - component: {fileID: 8224900291387100781}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2440,7 +2440,7 @@ GameObject:
   - component: {fileID: 8457632432331290438}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2533,7 +2533,7 @@ GameObject:
   - component: {fileID: 813126759814200999}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2626,7 +2626,7 @@ GameObject:
   - component: {fileID: 1261761376906034089}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2719,7 +2719,7 @@ GameObject:
   - component: {fileID: 6558714312809921698}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2812,7 +2812,7 @@ GameObject:
   - component: {fileID: 4255380842112959312}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2905,7 +2905,7 @@ GameObject:
   - component: {fileID: 4140927220816488122}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2998,7 +2998,7 @@ GameObject:
   - component: {fileID: 2563803691957164981}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3091,7 +3091,7 @@ GameObject:
   - component: {fileID: 8326004488113685231}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3184,7 +3184,7 @@ GameObject:
   - component: {fileID: 2182347790115889317}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3316,7 +3316,7 @@ GameObject:
   - component: {fileID: 5113628477477955838}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3409,7 +3409,7 @@ GameObject:
   - component: {fileID: 6180357816884424405}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3502,7 +3502,7 @@ GameObject:
   - component: {fileID: 681356839737835352}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3595,7 +3595,7 @@ GameObject:
   - component: {fileID: 4929954711729361345}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3688,7 +3688,7 @@ GameObject:
   - component: {fileID: 1293471067646026737}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3781,7 +3781,7 @@ GameObject:
   - component: {fileID: 1762169538808905036}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3874,7 +3874,7 @@ GameObject:
   - component: {fileID: 3545747882873916632}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3967,7 +3967,7 @@ GameObject:
   - component: {fileID: 652367827051186730}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4060,7 +4060,7 @@ GameObject:
   - component: {fileID: 6462516411612341978}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4192,7 +4192,7 @@ GameObject:
   - component: {fileID: 8595308300213141929}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4285,7 +4285,7 @@ GameObject:
   - component: {fileID: 4310336251870691026}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4378,7 +4378,7 @@ GameObject:
   - component: {fileID: 6066760816699514942}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4471,7 +4471,7 @@ GameObject:
   - component: {fileID: 514670342394818984}
   m_Layer: 0
   m_Name: Pos (5)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4564,7 +4564,7 @@ GameObject:
   - component: {fileID: 8081794726527023732}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4657,7 +4657,7 @@ GameObject:
   - component: {fileID: 3387928827565484268}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4750,7 +4750,7 @@ GameObject:
   - component: {fileID: 363654260711543004}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4843,7 +4843,7 @@ GameObject:
   - component: {fileID: 5265169149899111811}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4936,7 +4936,7 @@ GameObject:
   - component: {fileID: 1830124347539407787}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5029,7 +5029,7 @@ GameObject:
   - component: {fileID: 9020375170120798653}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5122,7 +5122,7 @@ GameObject:
   - component: {fileID: 1845928891613997692}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5254,7 +5254,7 @@ GameObject:
   - component: {fileID: 1673192587333912885}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5347,7 +5347,7 @@ GameObject:
   - component: {fileID: 8282162034730552530}
   m_Layer: 0
   m_Name: Pos (4)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5440,7 +5440,7 @@ GameObject:
   - component: {fileID: 3450062505479727851}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5533,7 +5533,7 @@ GameObject:
   - component: {fileID: 8090215790214489253}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5626,7 +5626,7 @@ GameObject:
   - component: {fileID: 2431401227443612944}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5719,7 +5719,7 @@ GameObject:
   - component: {fileID: 7419207517830440237}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5812,7 +5812,7 @@ GameObject:
   - component: {fileID: 3524796207858556857}
   m_Layer: 0
   m_Name: Pos (3)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5944,7 +5944,7 @@ GameObject:
   - component: {fileID: 5517388597937093887}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6037,7 +6037,7 @@ GameObject:
   - component: {fileID: 8579325509995712600}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6130,7 +6130,7 @@ GameObject:
   - component: {fileID: 6330187828299537297}
   m_Layer: 0
   m_Name: Pos (8)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6223,7 +6223,7 @@ GameObject:
   - component: {fileID: 7819334118208056228}
   m_Layer: 0
   m_Name: Pos (1)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6316,7 +6316,7 @@ GameObject:
   - component: {fileID: 3764013935183544957}
   m_Layer: 0
   m_Name: Pos (9)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6409,7 +6409,7 @@ GameObject:
   - component: {fileID: 6861743931564268429}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6541,7 +6541,7 @@ GameObject:
   - component: {fileID: 3138158531225309508}
   m_Layer: 0
   m_Name: Pos (2)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6634,7 +6634,7 @@ GameObject:
   - component: {fileID: 1650727690123180652}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6727,7 +6727,7 @@ GameObject:
   - component: {fileID: 7305083222598891598}
   m_Layer: 0
   m_Name: Pos (7)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6820,7 +6820,7 @@ GameObject:
   - component: {fileID: 6408893685486088686}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6913,7 +6913,7 @@ GameObject:
   - component: {fileID: 7008351595021608402}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7045,7 +7045,7 @@ GameObject:
   - component: {fileID: 7548704742545815244}
   m_Layer: 0
   m_Name: Pos (6)
-  m_TagString: Untagged
+  m_TagString: BoardPosition
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

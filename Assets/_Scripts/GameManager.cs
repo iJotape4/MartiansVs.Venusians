@@ -6,11 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     #region Private Properties
-   
+
     int LimitedeTurno = 2;
+    GameObject[] board;
+  
+    public Transform[] positions;
     #endregion
 
-    #region Public properties
+    #region Inspector properties
     PlayerController PlayerActual;
     public int JugadorActual = 0;
     public int TurnoActual = 1;
@@ -33,18 +36,28 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(this);
+
+        board = GameObject.FindGameObjectsWithTag("BoardPosition");
     }
 
     // Start is called before the first frame update
     void Start()
     {
+      
+        positions = new Transform[board.Length];
+
         for (int i=1; i<= LimitedeTurno; i++)
         {
             InsertarUltimo(i);
         }
 
         NodoTurno = Instance.raiz;
-        JugadorActual = NodoTurno.info; 
+        JugadorActual = NodoTurno.info;
+
+        for (int i = 0; i < board.Length; i++)
+        {
+            positions[i] = board[i].GetComponent<Transform>();
+        }
 
     }
 
