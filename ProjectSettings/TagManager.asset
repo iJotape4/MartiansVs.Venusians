@@ -7,6 +7,7 @@ TagManager:
   - Tablero
   - DadosCamara
   - BoardPosition
+  - Tile
   layers:
   - Default
   - TransparentFX

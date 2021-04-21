@@ -11,12 +11,12 @@ public class PlayerCamara : MonoBehaviour
 
     void Start()
     {
-        posicionR =  transform.position-jugador.transform.position ;
+        //posicionR =  transform.position-jugador.transform.position ;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position=jugador.transform.position+posicionR;
+        //transform.position=jugador.transform.position+posicionR;
     }
 }

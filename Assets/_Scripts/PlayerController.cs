@@ -47,17 +47,17 @@ public class PlayerController : Movement
 
         if (Input.GetMouseButtonUp(0))
         {
-                Ray ray= Camera.main.ScrreenPointToRay(Input.mousePosition);
+                Ray ray= Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
                     if (hit.collider.tag=="Tile")
                     {
-                        Tile tile= hit.collider.GetComponent<Tiles>();
+                        Tiles tile= hit.collider.GetComponent<Tiles>();
                         if (t.selectable)
                         {
                             //todo move target
-                            MoveToTile();
+                            MoveToTile(t);
                         }
                     }
                 }

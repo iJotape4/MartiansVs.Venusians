@@ -7,8 +7,11 @@ public class Movement : MonoBehaviour
 
     List<Tiles> selectablesTiles = new List<Tiles>();
     GameObject[] tiles;
+    public Tiles t;
+    public bool moving=false;
     public int move = 3;
-    public float jumpheigth;
+    public float moveSpeed =2;
+    public float jumpheigth=2;
     Vector3 velocity = new Vector3();
     Vector3 heading = new Vector3();
     Stack<Tiles> path = new Stack<Tiles>();
@@ -20,7 +23,7 @@ public class Movement : MonoBehaviour
     {
 
         tiles = GameObject.FindGameObjectsWithTag("Tile");
-        //halheight = GetComponent<Collider>().bounds.extends.y;
+        halheight =GetComponent<Collider>().bounds.extents.y;
     }
 
 
@@ -28,7 +31,7 @@ public class Movement : MonoBehaviour
     public void GetCurrentTile()
     {
 
-        currentTile = GetCurrentTile(GameObject);
+        currentTile =GetTargetTile(gameObject);
         currentTile.current = true;
     }
 
@@ -36,9 +39,9 @@ public class Movement : MonoBehaviour
     {
         RaycastHit hit;
         Tiles tile = null;
-        if (Physics.Raycast(target.transform.position,Vector3.up,out hit,1))
+        if (Physics.Raycast(target.transform.position,-Vector3.up,out hit,1))
         {
-            tile = hit.Collider.GetComponent<Tiles>();
+            tile = hit.collider.GetComponent<Tiles>();
         }
         return tile;
     }
@@ -79,7 +82,7 @@ public class Movement : MonoBehaviour
             {
                 foreach (Tiles tile in t.adjacencyList)
                 {
-                    if (tile.visited)
+                    if (!tile.visited)
                     {
                         tile.parent = t;
                         tile.visited = true;
