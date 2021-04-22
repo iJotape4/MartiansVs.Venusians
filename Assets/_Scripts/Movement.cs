@@ -23,15 +23,14 @@ public class Movement : MonoBehaviour
     {
 
         tiles = GameObject.FindGameObjectsWithTag("Tile");
-        halheight =GetComponent<Collider>().bounds.extents.y;
+        halheight = GetComponent<Collider>().bounds.extents.y;
     }
 
 
 
     public void GetCurrentTile()
     {
-
-        currentTile =GetTargetTile(gameObject);
+        currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
     }
 
@@ -96,18 +95,69 @@ public class Movement : MonoBehaviour
     }
 
 
-public void MoveToTile(Tiles tile){
-    path.Clear();
-    t.target=true;
-    moving=false; 
+    public void MoveToTile(Tiles tile){
+        path.Clear();
+        tile.target=true;
+        moving=true; 
 
-    Tiles next=tile;
+        Tiles next=tile;
 
-    while (next!=null)
-    {
-        path.Push(next);
-        next= next.parent;
+        while (next!=null)
+        {
+            path.Push(next);
+            next= next.parent;
+        }
     }
-}
+
+    public void Move(){
+        if (path.Count > 0)
+        {
+            Tiles t = path.Peek();
+            Vector3 target = t.transform.position;
+            target.y += halheight + t.GetComponent<Collider>().bounds.extents.y;
+
+            if (Vector3.Distance(transform.position, target) >= 0.05f)
+            {
+                CalculateHeading(target);
+                SetHorizontalVelocity();
+                transform.forward = heading;
+                transform.position += velocity * Time.deltaTime;
+            }
+            else{
+                transform.position = target;
+                path.Pop();
+            }
+            
+        }else
+        {
+            RemoveSelectableTiles();
+            moving = false;
+        }
+    }
+
+    protected void RemoveSelectableTiles(){
+        if (currentTile != null)
+        {
+            currentTile.current = false;
+            currentTile = null;
+        }
+
+        foreach (Tiles tile in selectablesTiles)
+        {
+            tile.Reset();
+        }
+        selectablesTiles.Clear();
+    }
+
+    void CalculateHeading(Vector3 target)
+    {
+        heading = target - transform.position;
+        heading.Normalize();
+    }
+
+    void SetHorizontalVelocity()
+    {
+        velocity = heading * moveSpeed;
+    }
 
 }

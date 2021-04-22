@@ -35,7 +35,7 @@ public class Tiles : MonoBehaviour
         }
         else
         {
-            //
+            GetComponent<Renderer>().material.color=Color.white;
         }
     }
 
