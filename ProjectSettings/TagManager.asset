@@ -8,6 +8,7 @@ TagManager:
   - DadosCamara
   - BoardPosition
   - Tile
+  - Target
   layers:
   - Default
   - TransparentFX

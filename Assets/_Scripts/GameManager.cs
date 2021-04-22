@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
 
-        board = GameObject.FindGameObjectsWithTag("BoardPosition");
+        board = GameObject.FindGameObjectsWithTag("Tile");
     }
 
     // Start is called before the first frame update
