@@ -31,15 +31,14 @@ public class PlayerController : Movement
         DadosCamera.enabled = false;
     }
     void update(){
-
     
-    if (!moving)
-    {
-        FindSelectableTiles();
-        CheckMouse();
-    }else{
-        //
-    }
+        if (!moving)
+        {
+            FindSelectableTiles();
+            CheckMouse();
+        }else{
+            Move();
+        }
     
     }
 
@@ -53,11 +52,11 @@ public class PlayerController : Movement
                 {
                     if (hit.collider.tag=="Tile")
                     {
-                        Tiles tile= hit.collider.GetComponent<Tiles>();
-                        if (t.selectable)
+                        Tiles tile = hit.collider.GetComponent<Tiles>();
+                        if (tile.selectable)
                         {
                             //todo move target
-                            MoveToTile(t);
+                            MoveToTile(tile);
                         }
                     }
                 }
