@@ -19,7 +19,7 @@ public class FireBall : MonoBehaviour
     protected CapsuleCollider _capsuleCollider;
     protected Transform _transform;
     public GameObject _fireball;
-    public Transform _initPos;
+    public Vector3 _initPos;
     #endregion
 
     private void Awake()
@@ -45,6 +45,7 @@ public class FireBall : MonoBehaviour
     void Start()
     {
         _rigidbody.useGravity = false;
+        _initPos = transform.position;
        // _fireball.SetActive(false);
     }
 
@@ -52,43 +53,62 @@ public class FireBall : MonoBehaviour
     void Update()
     {       
       
-        // Check if the position of the cube and sphere are approximately equal.
-
+        // Dispara la bola
         if (GameManager.Instance.TurnoActual % 5 == 0 && CanLaunch)
         {
-            _fireball.SetActive(true);
             ShootFireball();
         }
 
+        //Envía la bola al target cuando llega a su altura máxima
         if (_rigidbody.velocity.y <= -0.1f)
         {
             MoveToTarget();
         }
+
+        if ((GameManager.Instance.TurnoActual-1) % 5 == 0 )
+        {
+            //Habilita la condición de lanzamiento cuando empieza el próximo turno.
+            CanLaunch = true;
+        }
     }
+    
 
     void ShootFireball()
     {
         CanLaunch =false;
         _rigidbody.useGravity = true;
-        _rigidbody.AddForce(new Vector3(0, 10f, 0), ForceMode.Impulse);
-        _rigidbody.mass *= 0.5f;
+        _rigidbody.AddForce(new Vector3(0f, 10f, 0f), ForceMode.Impulse);
+
     }
 
     void MoveToTarget()
     {
-
-        _transform.rotation = Quaternion.Euler(45f, 90f, 90f);
-        float step = speed * Time.deltaTime; // calculate distance to move
+        _rigidbody.useGravity = false;
+        //Apunta la bola hacia el target
+        _transform.LookAt(_target.transform.position);
+        //Mueve la bola hacia el target
+        float step = speed * Time.deltaTime; 
         transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, step);
+       
     }
 
+    //Resetea la bola y la deja lista para el próximo lanzamiento.
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Target")
-        {
-            _rigidbody.useGravity = false;
+        {                
             _fireball.SetActive(false);
-            _transform = _initPos;
+
+            //Retorno a la posición inicial
+            _transform.position = _initPos;
+
+            //Coloca la rotación inicial
+            _transform.rotation = Quaternion.Euler(270f, 0f, 0f);
+            // Elimina las velocidades.
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero;
+
+            _fireball.SetActive(true);          
         }
     }
 }
