@@ -2,26 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MeshRenderer))]
+
 public class Nave : MonoBehaviour
 {
+
+    public static Nave Instance;
+
     #region Inspector properties
     public float speed = 2f;
     public GameObject _target;
     public GameObject JetPackPrefab;
     public bool CanFly =true;
     public int JetPacksCount=2;
+
     #endregion
 
     #region Private Properties
-   
+    [HideInInspector]
+    public float naveDistance;
     protected Transform _transform;
     protected MeshRenderer _meshRenderer;
     #endregion
 
+
+    private void Awake()
+    {
+        Nave.Instance = this.GetComponent<Nave>();
+    }
     // Start is called before the first frame update
     void Start()
     {
         _transform = GetComponent<Transform>();
+        naveDistance = Vector3.Distance(transform.position, _target.transform.position)/2;
+        CanFly = true;
     }
 
     // Update is called once per frame
@@ -54,9 +68,8 @@ public class Nave : MonoBehaviour
 
     public IEnumerator GenerateJetPackElement()
     {
-        var jetPack = Instantiate(JetPackPrefab, transform.position, Quaternion.identity);
-        jetPack.transform.SetParent(this.transform);
-        jetPack.transform.localPosition = new Vector3 (0f, 0f, 0f);
+        var jetPack = Instantiate(JetPackPrefab, _transform.position, Quaternion.identity, transform.parent) ;
+        
         JetPacksCount -= 1;
 
        yield  return null;
