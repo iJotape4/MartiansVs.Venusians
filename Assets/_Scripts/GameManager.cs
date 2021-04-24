@@ -124,6 +124,8 @@ public class GameManager : MonoBehaviour
         NodoTurno = NodoTurno.sig;
         JugadorActual = NodoTurno.info;
         TurnoActual += 1;
+
+        UIManager.Instance.ActivateUiCon("UiconDices");
     }
 
     //Creación de una lista circular para el TurnsManagement
