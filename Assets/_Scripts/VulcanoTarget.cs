@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(BoxCollider))]
 
 public class VulcanoTarget : MonoBehaviour
 {
     #region Inspector properties
 
-    public int target1;
-    public Transform targettrans;
 
     #endregion
 
     #region Private Properties
     protected SpriteRenderer _spriteRenderer;
     protected Transform _transform;
+    protected BoxCollider _boxCollider;
     #endregion
 
-     void Awake()
+    void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _transform = GetComponent<Transform>();
@@ -35,41 +35,41 @@ public class VulcanoTarget : MonoBehaviour
     void Start()
     {
         _spriteRenderer.enabled = false;
+        _boxCollider.isTrigger = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Activa el target un turno antes de que caiga la bola de fuego, y lo mantiene hasta el próximo turno.
-        if ((GameManager.Instance.TurnoActual+1) % 5 == 0 && !_spriteRenderer.enabled)
+        if ((GameManager.Instance.TurnoActual + 1) % 5 == 0 && !_spriteRenderer.enabled)
         {
-            PrepareTarget();
-            
+            _transform.position = PrepareTarget();
+
         }
 
-        //Desactiva el target después de que cayó la bola de fuego.
-        if ((GameManager.Instance.TurnoActual-1) % 5 == 0 )
-        {
-            _spriteRenderer.enabled = false;
-            
-        }
 
-      
     }
 
-    void PrepareTarget()
+    public Vector3 PrepareTarget()
     {
-        Debug.Log(_transform.position);
-        target1 = UnityEngine.Random.Range(0, GameManager.Instance.positions.Length);
-        
-        targettrans = GameManager.Instance.positions[target1].transform;
-        if (targettrans == null)
-        {
-            return;
-        }
+        int target = UnityEngine.Random.Range(0, GameManager.Instance.positions.Length);
+        Transform targettrans;
+
+        targettrans = GameManager.Instance.positions[target].transform;
+
         _spriteRenderer.enabled = true;
 
         //Coloca el target en una posición aleatoria del tablero.
-        _transform.position = new Vector3(targettrans.position.x, targettrans.position.y+0.44f , targettrans.position.z);
+        return new Vector3(targettrans.position.x, targettrans.position.y + 0.44f, targettrans.position.z);
+    }
+
+    //Desactiva el target después de que cayó la bola de fuego.
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Trowable")
+        {
+            _spriteRenderer.enabled = false;
+        }
     }
 }
