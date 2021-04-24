@@ -65,7 +65,7 @@ public class VulcanoTarget : MonoBehaviour
     }
 
     //Desactiva el target después de que cayó la bola de fuego.
-    private void OnTriggerEnter(Collider other)
+     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Trowable")
         {

@@ -10,7 +10,7 @@ public class FireBall : MonoBehaviour
 
     #region Inspector properties
     public VulcanoTarget _target;
-    public float speed = 10f;
+    public float speed = 2f;
     public bool CanLaunch = true;
     #endregion
 
@@ -18,7 +18,7 @@ public class FireBall : MonoBehaviour
     protected Rigidbody _rigidbody;
     protected CapsuleCollider _capsuleCollider;
     protected Transform _transform;
-    public GameObject _fireball;
+
     public Vector3 _initPos;
     #endregion
 
@@ -46,7 +46,6 @@ public class FireBall : MonoBehaviour
     {
         _rigidbody.useGravity = false;
         _initPos = transform.position;
-       // _fireball.SetActive(false);
     }
 
     // Update is called once per frame
@@ -81,7 +80,7 @@ public class FireBall : MonoBehaviour
 
     }
 
-    void MoveToTarget()
+     void MoveToTarget()
     {
         _rigidbody.useGravity = false;
         //Apunta la bola hacia el target
@@ -96,9 +95,7 @@ public class FireBall : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Target")
-        {                
-            _fireball.SetActive(false);
-
+        {
             //Retorno a la posición inicial
             _transform.position = _initPos;
 
@@ -107,8 +104,13 @@ public class FireBall : MonoBehaviour
             // Elimina las velocidades.
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
-
-            _fireball.SetActive(true);          
+     
         }
     }
-}
+
+    public void ActivateLaunch()
+    {
+        }
+
+    }
+
