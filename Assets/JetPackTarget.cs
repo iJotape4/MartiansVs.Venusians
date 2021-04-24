@@ -11,7 +11,15 @@ public class JetPackTarget : VulcanoTarget
         if (GameManager.Instance.prepareBlueTargets  && !_spriteRenderer.enabled)
         {
             _transform.position = PrepareTarget();
+            _transform.SetParent (null);
+        }
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Trowable")
+        {
+            Destroy(this.gameObject);
         }
     }
 }

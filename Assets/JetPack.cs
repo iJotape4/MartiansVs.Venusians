@@ -21,24 +21,28 @@ public class JetPack : FireBall
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.ThrowJetPacks && CanLaunch)
+        if (GameManager.Instance.ThrowJetPacks)
         {
             MoveToTarget();
         }
 
         if (GameManager.Instance.EnableNextJetPack)
         {
-            //Habilita la condición de lanzamiento cuando empieza el próximo turno.
-            CanLaunch = true;
+            
         }
     }
 
      void MoveToTarget()
     {
+        if(_target == null)
+        {
+            return;
+        }
+
         transform.SetParent(null);
         _meshRenderer.enabled = true;
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, step);
-        _rigidbody.AddRelativeTorque(new Vector3(0f, 1f, 0f), ForceMode.Impulse);
+        _rigidbody.AddRelativeTorque(new Vector3(0f, 1f, 0f), ForceMode.Force );
     }
 }

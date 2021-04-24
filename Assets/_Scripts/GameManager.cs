@@ -79,35 +79,38 @@ public class GameManager : MonoBehaviour
 
     void CalculateEvents()
     {
-        if ((TurnoActual + 1) % 5 == 0)
-            prepareRedTargets = true;
-        else
-            prepareRedTargets = false;
+        if (TurnoActual != 1) { 
 
-        if ((TurnoActual + 1) % 10 == 0)
-            prepareBlueTargets = true;
-        else
-            prepareBlueTargets = false;
+            if ((TurnoActual + 1) % 5 == 0 )
+                prepareRedTargets = true;
+            else
+                prepareRedTargets = false;
 
-        if (TurnoActual % 5 == 0)
-            ThrowFire = true;
-        else
-            ThrowFire = false;
+            if ((TurnoActual + 1) % 10 == 0)
+                prepareBlueTargets = true;
+            else
+                prepareBlueTargets = false;
 
-        if (TurnoActual % 10 == 0)
-            ThrowJetPacks = true;
-        else
-            ThrowJetPacks = false;
+            if (TurnoActual % 5 == 0)
+                ThrowFire = true;
+            else
+                ThrowFire = false;
 
-        if ((TurnoActual - 1) % 5 == 0)
-            EnableNextFire = true;
-        else
-            EnableNextFire = false;
+            if (TurnoActual % 10 == 0)
+                ThrowJetPacks = true;
+            else
+                ThrowJetPacks = false;
 
-        if ((TurnoActual - 1) % 10 == 0)
-            EnableNextJetPack = true;
-        else
-            EnableNextJetPack = false;
+            if ((TurnoActual - 1) % 5 == 0)
+                EnableNextFire = true;
+            else
+                EnableNextFire = false;
+
+            if ((TurnoActual - 1) % 10 == 0)
+                EnableNextJetPack = true;
+            else
+                EnableNextJetPack = false;
+        }
     }
 
     //Éste método maneja el cambio de turnos

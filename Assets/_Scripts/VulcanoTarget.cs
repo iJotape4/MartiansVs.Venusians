@@ -35,7 +35,6 @@ public class VulcanoTarget : MonoBehaviour
     void Start()
     {
         _spriteRenderer.enabled = false;
-        _boxCollider.isTrigger = true;
     }
 
     // Update is called once per frame
