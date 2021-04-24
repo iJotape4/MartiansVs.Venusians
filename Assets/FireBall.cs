@@ -53,7 +53,7 @@ public class FireBall : MonoBehaviour
     {       
       
         // Dispara la bola
-        if (GameManager.Instance.TurnoActual % 5 == 0 && CanLaunch)
+        if (GameManager.Instance.ThrowFire && CanLaunch)
         {
             ShootFireball();
         }
@@ -64,7 +64,7 @@ public class FireBall : MonoBehaviour
             MoveToTarget();
         }
 
-        if ((GameManager.Instance.TurnoActual-1) % 5 == 0 )
+        if (GameManager.Instance.EnableNextFire )
         {
             //Habilita la condición de lanzamiento cuando empieza el próximo turno.
             CanLaunch = true;

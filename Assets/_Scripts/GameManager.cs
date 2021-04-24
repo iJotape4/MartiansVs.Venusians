@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     int LimitedeTurno = 2;
     GameObject[] board;
-  
+    [HideInInspector]
     public Transform[] positions;
     #endregion
 
@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public int JugadorActual = 0;
     public int TurnoActual = 1;
     public string Tag;
+
+    public bool prepareRedTargets, prepareBlueTargets, ThrowFire, ThrowJetPacks, EnableNextFire=false, EnableNextJetPack=false;
     #endregion
 
     
@@ -64,15 +66,48 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CalculateEvents();
         if (Input.GetButtonDown("Jump"))
         {
            
             NextTurno();
           
         }
-
-       // Tag = ("Player" + JugadorActual);
+        // Tag = ("Player" + JugadorActual);
         //PlayerActual = GameObject.FindGameObjectWithTag(Tag).GetComponent<PlayerController>();
+    }
+
+    void CalculateEvents()
+    {
+        if ((TurnoActual + 1) % 5 == 0)
+            prepareRedTargets = true;
+        else
+            prepareRedTargets = false;
+
+        if ((TurnoActual + 1) % 10 == 0)
+            prepareBlueTargets = true;
+        else
+            prepareBlueTargets = false;
+
+        if (TurnoActual % 5 == 0)
+            ThrowFire = true;
+        else
+            ThrowFire = false;
+
+        if (TurnoActual % 10 == 0)
+            ThrowJetPacks = true;
+        else
+            ThrowJetPacks = false;
+
+        if ((TurnoActual - 1) % 5 == 0)
+            EnableNextFire = true;
+        else
+            EnableNextFire = false;
+
+        if ((TurnoActual - 1) % 10 == 0)
+            EnableNextJetPack = true;
+        else
+            EnableNextJetPack = false;
     }
 
     //Éste método maneja el cambio de turnos

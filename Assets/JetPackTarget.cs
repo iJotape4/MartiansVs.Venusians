@@ -8,7 +8,7 @@ public class JetPackTarget : VulcanoTarget
     // Update is called once per frame
     void Update()
     {
-        if ((GameManager.Instance.TurnoActual + 1) % 2 == 0 && !_spriteRenderer.enabled)
+        if (GameManager.Instance.prepareBlueTargets  && !_spriteRenderer.enabled)
         {
             _transform.position = PrepareTarget();
 

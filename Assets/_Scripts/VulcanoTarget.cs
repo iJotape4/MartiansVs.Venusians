@@ -42,7 +42,7 @@ public class VulcanoTarget : MonoBehaviour
     void Update()
     {
         //Activa el target un turno antes de que caiga la bola de fuego, y lo mantiene hasta el próximo turno.
-        if ((GameManager.Instance.TurnoActual + 1) % 5 == 0 && !_spriteRenderer.enabled)
+        if (GameManager.Instance.prepareRedTargets && !_spriteRenderer.enabled)
         {
             _transform.position = PrepareTarget();
 

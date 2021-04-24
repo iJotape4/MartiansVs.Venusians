@@ -21,12 +21,12 @@ public class JetPack : FireBall
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.TurnoActual % 2 == 0 && CanLaunch)
+        if (GameManager.Instance.ThrowJetPacks && CanLaunch)
         {
             MoveToTarget();
         }
 
-        if ((GameManager.Instance.TurnoActual - 1) % 10 == 0)
+        if (GameManager.Instance.EnableNextJetPack)
         {
             //Habilita la condición de lanzamiento cuando empieza el próximo turno.
             CanLaunch = true;
@@ -35,6 +35,7 @@ public class JetPack : FireBall
 
      void MoveToTarget()
     {
+        transform.SetParent(null);
         _meshRenderer.enabled = true;
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, step);
