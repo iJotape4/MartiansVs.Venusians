@@ -69,7 +69,8 @@ public class Tiles : MonoBehaviour
 
             if (!Tile.Vulcanized)
             {
-                if (Vector3.Distance(_transform.position, _tilesList[i].transform.position) <= Dado.Instance.NumeroActual)
+                //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
+                if (Vector3.Distance(_transform.position, _tilesList[i].transform.position) <= Dado.Instance.NumeroActual+0.5)
                 {
                 if (Tile.UnitHere && Tile != this)
                     Tile.colorear("CasillaRojaSprite");

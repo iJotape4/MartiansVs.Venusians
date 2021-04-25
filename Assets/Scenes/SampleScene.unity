@@ -172,6 +172,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &2628864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -283,6 +284,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &24474710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -394,6 +396,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &68441613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -633,6 +636,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &100398372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -744,6 +748,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &101913943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -855,6 +860,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &134695185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -966,6 +972,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &138230192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1077,6 +1084,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &145053310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1188,6 +1196,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &191088011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1299,6 +1308,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &199176429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1499,6 +1509,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &265204662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1610,6 +1621,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &277943160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1928,6 +1940,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &321073380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2039,6 +2052,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &372595892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2150,6 +2164,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &445771410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2380,6 +2395,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &488039947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2491,6 +2507,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &501353854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2602,6 +2619,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &521590601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2713,6 +2731,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &575247960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2824,6 +2843,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &581189396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2935,6 +2955,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &648203554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3046,6 +3067,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &660191133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3268,6 +3290,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &705117254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3379,6 +3402,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &705480961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3490,6 +3514,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &738841052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3601,6 +3626,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &742450353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3786,6 +3812,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &771367032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3897,6 +3924,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &784875952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4074,6 +4102,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &817183936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4185,6 +4214,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &847674302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4296,6 +4326,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &852900192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4407,6 +4438,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &859396991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4587,6 +4619,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &886124851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4698,6 +4731,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &901658118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4809,6 +4843,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &959693360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4920,6 +4955,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &968786523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5031,6 +5067,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &977879357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5142,6 +5179,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1025352909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5376,6 +5414,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1142635312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5487,6 +5526,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1152701797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5598,6 +5638,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1175236478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5709,6 +5750,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1213149821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5850,6 +5892,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1303825127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5961,6 +6004,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1370991086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6072,6 +6116,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1386178064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6183,6 +6228,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1389435730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6294,6 +6340,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1416165867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6405,6 +6452,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1443921800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6516,6 +6564,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1461358133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6706,6 +6755,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1503381458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6817,6 +6867,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1504985429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6928,6 +6979,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1511991998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7039,6 +7091,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1543456947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7150,6 +7203,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1555388282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7261,6 +7315,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1562085370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7372,6 +7427,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1565485794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7483,6 +7539,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1609838804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7594,6 +7651,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1662508217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7705,6 +7763,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1696770957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7838,6 +7897,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1756932643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7949,6 +8009,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1835177822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8060,6 +8121,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1905552299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8263,6 +8325,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1926053139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8396,6 +8459,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1954768529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8507,6 +8571,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &1960023595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8618,6 +8683,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1964078576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8729,6 +8795,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &1966022522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8840,6 +8907,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2010065393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8951,6 +9019,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2029056516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9062,6 +9131,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2030107348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9173,6 +9243,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2042554902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9284,6 +9355,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2042895200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9395,6 +9467,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &2048337285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9506,6 +9579,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &2052800794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9617,6 +9691,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2059426830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9728,6 +9803,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2062348613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9839,6 +9915,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2069293503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9950,6 +10027,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2093144647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10061,6 +10139,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 1
+  VulcanoCounter: 0
 --- !u!65 &2106185540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10247,6 +10326,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2136989188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10358,6 +10438,7 @@ MonoBehaviour:
   _tilesList: []
   UnitHere: 0
   Vulcanized: 0
+  VulcanoCounter: 0
 --- !u!65 &2143565886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10443,7 +10524,7 @@ PrefabInstance:
     - target: {fileID: 6413944535734049122, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6413944535734049122, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce,
         type: 3}

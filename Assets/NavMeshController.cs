@@ -44,7 +44,8 @@ public class NavMeshController : MonoBehaviour
         isclicked=true;
         posMouse= new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
-        if (Vector3.Distance(posActual, posMouse)<Dado.Instance.NumeroActual)
+        //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
+        if (Vector3.Distance(posActual, posMouse)<Dado.Instance.NumeroActual + 0.5  )
         {
             
              Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -56,13 +57,11 @@ public class NavMeshController : MonoBehaviour
 
                 var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
 
-                objetivo = TileTarget.gameObject;
+                 objetivo = corregirPosition(TileTarget.gameObject);
+               // objetivo = TileTarget.gameObject;
 
                 agente.destination = objetivo.transform.position;
-                transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
-
-                
-                
+                transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);               
             }
         }else{
                 isclicked=false;
@@ -71,8 +70,24 @@ public class NavMeshController : MonoBehaviour
         }
 
         }
+    }
 
-
+    //Método que elije la casilla mas
+    private GameObject corregirPosition(GameObject Tiletarget)
+    {
+        float Nearest = 20;
+        GameObject NearestObject = Tiletarget.gameObject;
+        for (int i = 0; i < GameManager.Instance.board.Length; i++)
+        {
+           float provisional = Vector3.Distance(Tiletarget.transform.position, GameManager.Instance.board[i].transform.position);
+            if(provisional< Nearest  && provisional < Dado.Instance.NumeroActual)
+            {
+                Nearest = provisional;
+                NearestObject = GameManager.Instance.board[i];
+            }
+        }
+        Tiletarget.transform.position = new Vector3(NearestObject.transform.position.x, Tiletarget.transform.position.y, NearestObject.transform.position.z);
+        return Tiletarget;
     }
 
 private void OnTriggerEnter(Collider other)
