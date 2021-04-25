@@ -12,6 +12,8 @@ public class Tiles : MonoBehaviour
     public Transform _transform;
     public GameObject[] _tilesList;
     public bool UnitHere;
+    public bool Vulcanized;
+    public int  VulcanoCounter;
     void Start()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -24,6 +26,15 @@ public class Tiles : MonoBehaviour
 
     private void Update()
     {
+        if(VulcanoCounter != 0)
+        {
+            if(VulcanoCounter+3 == GameManager.Instance.TurnoActual)
+            {
+                Vulcanized = false;
+                VulcanoCounter = 0;
+            }
+        }
+       
 
     }
     void colorear(string color)
@@ -54,18 +65,22 @@ public class Tiles : MonoBehaviour
     {
         for (int i = 0; i < GameManager.Instance.board.Length; i++)
         {
+            Tiles Tile = _tilesList[i].GetComponent<Tiles>();
 
-            if (Vector3.Distance(_transform.position, _tilesList[i].transform.position) <= Dado.Instance.NumeroActual)
+            if (!Tile.Vulcanized)
             {
-                if (_tilesList[i].GetComponent<Tiles>().UnitHere && _tilesList[i].GetComponent<Tiles>() != this)
-                    _tilesList[i].GetComponent<Tiles>().colorear("CasillaRojaSprite");
+                if (Vector3.Distance(_transform.position, _tilesList[i].transform.position) <= Dado.Instance.NumeroActual)
+                {
+                if (Tile.UnitHere && Tile != this)
+                    Tile.colorear("CasillaRojaSprite");
                 else
-                    _tilesList[i].GetComponent<Tiles>().colorear("CasillaGreenSprite");
-            }
+                    Tile.colorear("CasillaGreenSprite");
+                 }
             else
             {
-                _tilesList[i].GetComponent<Tiles>().colorear("CasillaBlueSprite");
+                Tile.colorear("CasillaBlueSprite");
             }
+            }   
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -73,6 +88,9 @@ public class Tiles : MonoBehaviour
         if (other.gameObject.layer == 10)
         {
             colorear("Tile");
+            Vulcanized = true;
+            VulcanoCounter = GameManager.Instance.TurnoActual;
+            //StartCoroutine(Unvulcanization());
         }
     }
 
@@ -82,6 +100,16 @@ public class Tiles : MonoBehaviour
         {
             UnitHere = false;
         }
+    }
+
+    public IEnumerator Unvulcanization()
+    {
+        int Counter = GameManager.Instance.TurnoActual;
+        if(GameManager.Instance.TurnoActual == Counter + 3)
+        {
+            Vulcanized = false;
+        }
+        yield return null;
     }
 }
 
