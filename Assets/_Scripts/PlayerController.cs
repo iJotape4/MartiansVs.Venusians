@@ -86,7 +86,7 @@ public class PlayerController : Movement
         //TODO Aqui van los eventos  que se pueden ejecutar antes de terminar el turno
 
         //Termina el turno
-        GameManager.Instance.NextTurno();
+     //   GameManager.Instance.NextTurno();
     }
 
     }

@@ -9,13 +9,13 @@ public class NavMeshController : MonoBehaviour
     [SerializeField] private Camera mainCamera;
 
     public GameObject objetivo;
-    public Transform target;
+
     public GameObject TileTargetPrefab;
     public NavMeshAgent agente;
     private float speed = 20;
     private Vector3 posMouse;
     private Vector3 posActual;
-    public MeshRenderer _meshRenderer;
+
     public bool isclicked=false;
     
     //public Camera camera;
@@ -38,7 +38,7 @@ public class NavMeshController : MonoBehaviour
 
         
         posActual=agente.transform.position;
-
+        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual) { 
 
         if (Input.GetMouseButtonDown(0)&& !isclicked){
         isclicked=true;
@@ -69,7 +69,8 @@ public class NavMeshController : MonoBehaviour
             }
 
         }
-        
+
+        }
 
 
     }
@@ -79,6 +80,7 @@ private void OnTriggerEnter(Collider other)
         if (other.tag=="Destino")
         {
           isclicked=false;
+            GameManager.Instance.NextTurno();
         }
     }
 }

@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2628864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -275,6 +278,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &24474710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382,6 +388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &68441613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -617,6 +626,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &100398372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -724,6 +736,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &101913943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -831,6 +846,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &134695185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -938,6 +956,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &138230192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1045,6 +1066,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &145053310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1152,6 +1176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &191088011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1259,6 +1286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &199176429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1455,6 +1485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &265204662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1562,6 +1595,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &277943160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1680,6 +1716,48 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 300496189}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &280598926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280598921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c81b5baec4ee0479781d26772c3b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 751458202}
+  objetivo: {fileID: 0}
+  target: {fileID: 0}
+  TileTargetPrefab: {fileID: 7991576216675265654, guid: 41f2279ae8609c24ab42c3fa745fae3d,
+    type: 3}
+  agente: {fileID: 0}
+  _meshRenderer: {fileID: 0}
+  isclicked: 0
+--- !u!195 &280598927
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280598921}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &300496189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1767,6 +1845,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a27766f2ff30c047a1c0aea1c5a437e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Unit
+      objectReference: {fileID: 0}
     - target: {fileID: 1096695464039504049, guid: 9a27766f2ff30c047a1c0aea1c5a437e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1831,6 +1914,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &321073380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1938,6 +2024,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &372595892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2045,6 +2134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &445771410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2271,6 +2363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &488039947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2378,6 +2473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &501353854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2485,6 +2583,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &521590601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2592,6 +2693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &575247960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2699,6 +2803,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &581189396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2806,6 +2913,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &648203554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2913,6 +3023,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &660191133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3131,6 +3244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &705117254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3238,6 +3354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &705480961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3345,6 +3464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &738841052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3452,6 +3574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &742450353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3633,6 +3758,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &771367032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3740,6 +3868,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &784875952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3913,6 +4044,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &817183936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4020,6 +4154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &847674302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4127,6 +4264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &852900192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4234,6 +4374,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &859396991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4410,6 +4553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &886124851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4517,6 +4663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &901658118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4624,6 +4773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &959693360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4731,6 +4883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &968786523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4838,6 +4993,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &977879357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4945,6 +5103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1025352909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5034,6 +5195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f2d8802ab233a449f3687fdcaf7cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: []
   positions: []
   JugadorActual: 0
   TurnoActual: 1
@@ -5174,6 +5336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1142635312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5281,6 +5446,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1152701797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5388,6 +5556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1175236478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5495,6 +5666,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1213149821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5632,6 +5806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1303825127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5739,6 +5916,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1370991086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5846,6 +6026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1386178064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5953,6 +6136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1389435730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6060,6 +6246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1416165867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6369,6 +6558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1443921800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6476,6 +6668,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1461358133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6662,6 +6857,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1503381458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6769,6 +6967,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1504985429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6876,6 +7077,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1511991998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6983,6 +7187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1543456947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7090,6 +7297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1555388282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7197,6 +7407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1562085370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7304,6 +7517,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1565485794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7411,6 +7627,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1609838804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7518,6 +7737,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1662508217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7625,6 +7847,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1696770957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7754,6 +7979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1756932643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7861,6 +8089,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1835177822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7968,6 +8199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1905552299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8167,6 +8401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1926053139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8296,6 +8533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1954768529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8403,6 +8643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1960023595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8510,6 +8753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1964078576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8617,6 +8863,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &1966022522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8724,6 +8973,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2010065393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8831,6 +9083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2029056516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8938,6 +9193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2030107348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9045,6 +9303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2042554902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9152,6 +9413,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2042895200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9259,6 +9523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2048337285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9366,6 +9633,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2052800794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9473,6 +9743,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2059426830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9580,6 +9853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2062348613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9687,6 +9963,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2069293503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9794,6 +10073,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2093144647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9901,6 +10183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2106185540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10083,6 +10368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2136989188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10190,6 +10478,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 0}
+  _transform: {fileID: 0}
+  _tilesList: []
+  UnitHere: 0
 --- !u!65 &2143565886
 BoxCollider:
   m_ObjectHideFlags: 0

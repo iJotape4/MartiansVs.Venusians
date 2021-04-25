@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     #region Private Properties
 
     int LimitedeTurno = 2;
-    GameObject[] board;
+    public GameObject[] board;
     [HideInInspector]
     public Tiles[] positions;
     #endregion
