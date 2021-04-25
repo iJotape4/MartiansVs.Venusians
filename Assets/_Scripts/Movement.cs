@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
     {
         RaycastHit hit;
         Tiles tile = null;
-        if (Physics.Raycast(target.transform.position,-Vector3.up,out hit,1))
+        if (Physics.Raycast(target.transform.position,-Vector3.down,out hit,1))
         {
             tile = hit.collider.GetComponent<Tiles>();
         }
