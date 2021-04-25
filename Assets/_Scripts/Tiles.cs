@@ -70,7 +70,7 @@ public class Tiles : MonoBehaviour
             {
                 RaycastHit hit;
 
-                if (!Physics.Raycast(tiles.transform.position, Vector3.up, out hit, 1))
+                if (!Physics.Raycast(tiles.transform.position, Vector3.down, out hit, 1))
                 {
                     adjacencyList.Add(tiles);
                 }
