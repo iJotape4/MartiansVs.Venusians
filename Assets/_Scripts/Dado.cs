@@ -8,7 +8,7 @@ public class Dado : MonoBehaviour
     public cara[] caras;
     public int NumeroActual;
     public Vector3 PosInicial;
-
+ 
     public bool moviendo;
 
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class Dado : MonoBehaviour
         if (Input.GetButtonDown("Submit"))
         {
             TirarDado();
-          
+            
         }
     }
 
@@ -49,7 +49,7 @@ public class Dado : MonoBehaviour
     public void TirarDado()
     {
         UIManager.Instance.DesaactivateUiCon("UiconDices");
-
+       
         transform.position = PosInicial;
         float FuerzaInicial = Random.Range(-10, 10 );
         float FuerzaInicial2 = Random.Range(10, 10);

@@ -60,7 +60,7 @@ public class VulcanoTarget : MonoBehaviour
         _spriteRenderer.enabled = true;
 
         //Coloca el target en una posición aleatoria del tablero.
-        return new Vector3(targettrans.position.x, targettrans.position.y + 0.44f, targettrans.position.z);
+        return new Vector3(targettrans.position.x, targettrans.position.y + 0.5f, targettrans.position.z);
     }
 
     //Desactiva el target después de que cayó la bola de fuego.

@@ -98,14 +98,16 @@ public class PlayerController : Movement
 
         while (dado1.IsMoving() )
         {
-            DadosCamera.enabled = true;
+          //  Camera.main.enabled = false;
+          //  DadosCamera.enabled = true;
          
             yield return new WaitForSeconds(0.001f);
         }
 
      
-        DadosCamera.enabled = false;
-        
+      //  DadosCamera.enabled = false;
+       //Camera.main.enabled = true;
+
 
         yield return new WaitForSeconds(0.1f); ;
 
