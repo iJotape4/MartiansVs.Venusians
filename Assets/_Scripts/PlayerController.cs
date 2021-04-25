@@ -23,46 +23,15 @@ public class PlayerController : Movement
     void Start()
     {
           rigidbody=GetComponent<Rigidbody>(); 
-          init();
-
+          
 
 
         DadosCamera = GameObject.FindGameObjectWithTag("DadosCamara").GetComponent<Camera>();
         DadosCamera.enabled = false;
     }
-    void update(){
-    
-        if (!moving)
-        {
-            FindSelectableTiles();
-            CheckMouse();
-        }else{
-            Move();
-        }
-    
-    }
+   
 
-    void CheckMouse(){
-
-        if (Input.GetMouseButtonUp(0))
-        {
-                Ray ray= Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.collider.tag=="Tile")
-                    {
-                        Tiles tile = hit.collider.GetComponent<Tiles>();
-                        if (tile.selectable)
-                        {
-                            //todo move target
-                            MoveToTile(tile);
-                        }
-                    }
-                }
-        }
-
-    }
+ 
 
     // Update is called once per frame
     void FixedUpdate()

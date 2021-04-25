@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class NavMeshController : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
@@ -14,6 +15,7 @@ public class NavMeshController : MonoBehaviour
     private float speed = 20;
     private Vector3 posMouse;
     private Vector3 posActual;
+    public MeshRenderer _meshRenderer;
     public bool isclicked=false;
     
     //public Camera camera;
@@ -21,14 +23,19 @@ public class NavMeshController : MonoBehaviour
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
-
+        
 
         
     }
 
     // Update is called once per frame
+    void colorear(){
+        
+
+    }
     void Update()
-    {
+    {   
+
         
         posActual=agente.transform.position;
 
@@ -39,6 +46,7 @@ public class NavMeshController : MonoBehaviour
 
         if (Vector3.Distance(posActual, posMouse)<3f)
         {
+            
              Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit RaycastHit))
             {
