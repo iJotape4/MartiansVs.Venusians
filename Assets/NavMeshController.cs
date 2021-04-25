@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class NavMeshController : MonoBehaviour
 {
 
-    public Transform objetivo;
+    public GameObject objetivo;
     public GameObject TileTargetPrefab;
     public NavMeshAgent agente;
     //public Camera camera;
@@ -26,21 +26,22 @@ public class NavMeshController : MonoBehaviour
         {
 
 
-            RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),out hit))
-            {
-                agente.destination=hit.point;
-            }
-            
+            /*  RaycastHit hit;
+              if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),out hit))
+              {
+                  agente.destination=hit.point;
+              }*/
+
             //var objectPos = Camera.current.ScreenToWorldPoint(Input.mousePosition);
-         /**  
-          var TileTarget = Instantiate(TileTargetPrefab,Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+
+            Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+          var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
                
                 objetivo=TileTarget.gameObject;
                  agente.destination=objetivo.transform.position;
-         */    
+            
         }
-         Debug.Log(Input.mousePosition);
+         Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
   
 }
