@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider))]
@@ -16,6 +14,8 @@ public class VulcanoTarget : MonoBehaviour
     protected SpriteRenderer _spriteRenderer;
     protected Transform _transform;
     protected BoxCollider _boxCollider;
+    //Posiciones del tablero donde hay volcanes y no deberian ser targeteables
+    protected int[] OmitedTiles = { 24, 25, 33, 34 , 56, 57 ,65,66 };
     #endregion
 
     void Awake()
@@ -50,9 +50,24 @@ public class VulcanoTarget : MonoBehaviour
 
     }
 
+    //Metodo para generar una posición aleatoria del mapa, omitiendo las que ocupan los volcanes
+    public int GenerateRandomNumber()
+    {
+        int RandomNum = UnityEngine.Random.Range(0, GameManager.Instance.positions.Length);
+        for (int i = 0; i< OmitedTiles.Length; i++)
+        {
+            if (RandomNum == OmitedTiles[i])
+            {
+                Debug.Log(RandomNum);
+                return (GenerateRandomNumber());
+            }
+        }
+        return RandomNum;
+    }
+
     public Vector3 PrepareTarget()
     {
-        int target = UnityEngine.Random.Range(0, GameManager.Instance.positions.Length);
+        int target = GenerateRandomNumber();
         Transform targettrans;
 
         targettrans = GameManager.Instance.positions[target].transform;
