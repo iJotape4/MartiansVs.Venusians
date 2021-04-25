@@ -44,7 +44,7 @@ public class NavMeshController : MonoBehaviour
         isclicked=true;
         posMouse= new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
-        if (Vector3.Distance(posActual, posMouse)<3f)
+        if (Vector3.Distance(posActual, posMouse)<Dado.Instance.NumeroActual)
         {
             
              Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);

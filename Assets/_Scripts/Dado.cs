@@ -4,12 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Dado : MonoBehaviour
-{
+{   
+    public static Dado Instance;
+
     public cara[] caras;
     public int NumeroActual;
     public Vector3 PosInicial;
  
     public bool moviendo;
+
+
+     private void Awake()
+    {
+        if (Dado.Instance == null)
+        {
+            Dado.Instance = this.GetComponent<Dado>();
+
+        }
+        else if (Dado.Instance != null && Dado.Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+    }
 
     // Start is called before the first frame update
     void Start()
