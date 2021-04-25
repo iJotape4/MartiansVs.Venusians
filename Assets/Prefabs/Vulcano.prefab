@@ -395,6 +395,11 @@ PrefabInstance:
       propertyPath: _initPos
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3146255125334886053, guid: 63ab8c99b9cfe2b418fcc7aab2b0ecea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7202459872638620643, guid: 63ab8c99b9cfe2b418fcc7aab2b0ecea,
         type: 3}
       propertyPath: m_Name
@@ -404,6 +409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Trowable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202459872638620643, guid: 63ab8c99b9cfe2b418fcc7aab2b0ecea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7547918302313515353, guid: 63ab8c99b9cfe2b418fcc7aab2b0ecea,
         type: 3}
@@ -474,6 +484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063325433054836938, guid: 63ab8c99b9cfe2b418fcc7aab2b0ecea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ab8c99b9cfe2b418fcc7aab2b0ecea, type: 3}

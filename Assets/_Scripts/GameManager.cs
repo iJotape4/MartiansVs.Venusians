@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     int LimitedeTurno = 2;
     GameObject[] board;
     [HideInInspector]
-    public Transform[] positions;
+    public Tiles[] positions;
     #endregion
 
     #region Inspector properties
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
       
-        positions = new Transform[board.Length];
+        positions = new Tiles[board.Length];
 
         for (int i=1; i<= LimitedeTurno; i++)
         {
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < board.Length; i++)
         {
-            positions[i] = board[i].GetComponent<Transform>();
+            positions[i] = board[i].GetComponent<Tiles>();
         }
 
     }
