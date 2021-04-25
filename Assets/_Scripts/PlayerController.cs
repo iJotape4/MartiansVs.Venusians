@@ -7,6 +7,7 @@ public class PlayerController : Movement
 
     #region Private Properties
     Rigidbody rigidbody;
+    Camera MainCamera;
     #endregion
 
     #region Inspector Properties
@@ -22,12 +23,13 @@ public class PlayerController : Movement
     // Start is called before the first frame update
     void Start()
     {
-          rigidbody=GetComponent<Rigidbody>(); 
-          
+          rigidbody=GetComponent<Rigidbody>();
 
+
+        MainCamera= Camera.main.GetComponent<Camera>();
 
         DadosCamera = GameObject.FindGameObjectWithTag("DadosCamara").GetComponent<Camera>();
-        DadosCamera.enabled = false;
+      //  DadosCamera.enabled = false;
     }
    
 
@@ -62,24 +64,24 @@ public class PlayerController : Movement
 
         if (!dado1.IsMoving())
         {
+            MainCamera.enabled = false;
             dado1.TirarDado();
         }
 
         while (dado1.IsMoving() )
         {
-          //  Camera.main.enabled = false;
-          //  DadosCamera.enabled = true;
+          
+          DadosCamera.enabled = true;
          
             yield return new WaitForSeconds(0.001f);
         }
 
-     
-      //  DadosCamera.enabled = false;
-       //Camera.main.enabled = true;
-
 
         yield return new WaitForSeconds(0.1f); ;
 
+
+        DadosCamera.enabled = false;
+        MainCamera.enabled = true;
 
         //TODO Aqui van los eventos  que se pueden ejecutar antes de terminar el turno
 
