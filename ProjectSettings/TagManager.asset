@@ -10,6 +10,7 @@ TagManager:
   - Tile
   - Target
   - Trowable
+  - Unit
   layers:
   - Default
   - TransparentFX

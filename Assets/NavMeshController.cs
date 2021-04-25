@@ -19,7 +19,7 @@ public class NavMeshController : MonoBehaviour
         agente = GetComponent<NavMeshAgent>();
 
 
-        agente.destination=target.position;
+        
     }
 
     // Update is called once per frame
@@ -35,7 +35,6 @@ public class NavMeshController : MonoBehaviour
             {
                 float step = speed * Time.deltaTime;
 
-                ///var objectPos = Camera.current.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
                 var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
@@ -44,15 +43,10 @@ public class NavMeshController : MonoBehaviour
 
                 agente.destination = objetivo.transform.position;
                 transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
+
+                
             }
-            /*
-            RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
-            {
-                agente.destination = RaycastHit.point;
-                Debug.Log(Input.mousePosition);
-            }
-*/
+         
 
 
         }
