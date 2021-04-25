@@ -29,6 +29,7 @@ public class Dado : MonoBehaviour
         if (Input.GetButtonDown("Submit"))
         {
             TirarDado();
+          
         }
     }
 
@@ -47,6 +48,7 @@ public class Dado : MonoBehaviour
 
     public void TirarDado()
     {
+        UIManager.Instance.DesaactivateUiCon("UiconDices");
 
         transform.position = PosInicial;
         float FuerzaInicial = Random.Range(-10, 10 );
