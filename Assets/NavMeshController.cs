@@ -12,6 +12,10 @@ public class NavMeshController : MonoBehaviour
     public GameObject TileTargetPrefab;
     public NavMeshAgent agente;
     private float speed = 20;
+    private Vector3 posMouse;
+    private Vector3 posActual;
+    public bool isclicked=false;
+    
     //public Camera camera;
     // Start is called before the first frame update
     void Start()
@@ -25,12 +29,17 @@ public class NavMeshController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        posActual=agente.transform.position;
 
 
+        if (Input.GetMouseButtonDown(0)&& !isclicked){
+        isclicked=true;
+        posMouse= new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Vector3.Distance(posActual, posMouse)<3f)
         {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit RaycastHit))
             {
                 float step = speed * Time.deltaTime;
@@ -45,15 +54,23 @@ public class NavMeshController : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
 
                 
+                
             }
-         
-
+        }else{
+                isclicked=false;
+            }
 
         }
+        
 
 
-
-        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
+private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag=="Destino")
+        {
+          isclicked=false;
+        }
+    }
 }
