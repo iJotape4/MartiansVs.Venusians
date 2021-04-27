@@ -13,6 +13,8 @@ public class NavMeshController : MonoBehaviour
     public GameObject TileTargetPrefab;
     public NavMeshAgent agente;
     private float speed = 20;
+    public bool Is_moving = false;
+    private Animator animator;
     private Vector3 posMouse;
     private Vector3 posActual;
 
@@ -23,7 +25,7 @@ public class NavMeshController : MonoBehaviour
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
-        
+        animator = GetComponent<Animator>();
 
         
     }
@@ -52,6 +54,8 @@ public class NavMeshController : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit RaycastHit))
             {
                 float step = speed * Time.deltaTime;
+                Is_moving = true;
+                animator.SetBool("Is_moving", Is_moving);
 
                 Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
@@ -94,8 +98,44 @@ private void OnTriggerEnter(Collider other)
     {
         if (other.tag=="Destino")
         {
-          isclicked=false;
+            isclicked = false;
+            Is_moving = false;
+            animator.SetBool("Is_moving", Is_moving);
             GameManager.Instance.NextTurno();
         }
     }
+
+    private void OnClickedUnit()
+    {
+        if (Input.GetMouseButtonDown(0)){
+
+                RaycastHit hit;
+
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+                
+                if ( Physics.Raycast ( ray, out hit, 100.0f))
+                {
+                    for ( int i =0; i < GameManager.Instance.positions.Length; i++)
+                {
+                    if(GameManager.Instance.positions[i].gameObject == hit.transform.gameObject)
+                    {
+                        Debug.Log("You selected the " + hit.transform.name);
+                        GameObject test = hit.transform.gameObject;
+                        /*
+                        if (test.LayerMask.NameToLayer("Venusian"))
+                        {
+                            
+                        }
+                        */
+                    }
+                }
+                }
+                
+
+                
+        }
+    }
 }
+
+

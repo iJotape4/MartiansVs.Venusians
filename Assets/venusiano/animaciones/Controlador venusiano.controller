@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Is_mooving
+    m_ConditionEvent: Is_moving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1785633529846440543}
@@ -62,7 +62,7 @@ AnimatorController:
   m_Name: Controlador venusiano
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Is_mooving
+  - m_Name: Is_moving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -90,7 +90,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Is_mooving
+    m_ConditionEvent: Is_moving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2668289719190244050}

@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eca692e7b9ed9854184f48b6fd22c3a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 206.801
+      value: 206.252
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eca692e7b9ed9854184f48b6fd22c3a5,
         type: 3}
@@ -707,6 +707,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: eca692e7b9ed9854184f48b6fd22c3a5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c0431f4049dbe3e45a1e5b209b5c7969, type: 2}
     - target: {fileID: 6038414690906536434, guid: eca692e7b9ed9854184f48b6fd22c3a5,
         type: 3}
       propertyPath: m_Layer
@@ -790,7 +795,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   objetivo: {fileID: 0}
   TileTargetPrefab: {fileID: 0}
-  agente: {fileID: 0}
+  agente: {fileID: 50134084}
+  Is_moving: 0
   isclicked: 0
 --- !u!54 &50134080
 Rigidbody:
@@ -803,7 +809,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -819,9 +825,61 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.35762548
-  m_Height: 2.2034912
+  m_Height: 2.1137695
   m_Direction: 1
-  m_Center: {x: -0.00928545, y: 1.0465088, z: 0}
+  m_Center: {x: -0.00928545, y: 1.0913696, z: 0}
+--- !u!114 &50134082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50134078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54feb0c50e9b2f54a84c4f2c9542176f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dado1: {fileID: 0}
+  PlayerTurn: 0
+  DadosCamera: {fileID: 0}
+  velocidad: 0
+--- !u!136 &50134083
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50134078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.36221957
+  m_Height: 1.0448608
+  m_Direction: 1
+  m_Center: {x: -0.009612799, y: 0.5543213, z: 0}
+--- !u!195 &50134084
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50134078}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &68441610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,6 +2292,7 @@ MonoBehaviour:
   TileTargetPrefab: {fileID: 7991576216675265654, guid: 41f2279ae8609c24ab42c3fa745fae3d,
     type: 3}
   agente: {fileID: 0}
+  Is_moving: 0
   isclicked: 0
 --- !u!195 &280598927
 NavMeshAgent:
@@ -2615,7 +2674,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 61ad6e9566385c44790f4fd37125ffe4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 206.79
+      value: 206.257
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61ad6e9566385c44790f4fd37125ffe4,
         type: 3}
@@ -2645,7 +2704,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 61ad6e9566385c44790f4fd37125ffe4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61ad6e9566385c44790f4fd37125ffe4,
         type: 3}
@@ -2917,6 +2976,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 61ad6e9566385c44790f4fd37125ffe4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: de469534a01171945855e8d13683ee0b, type: 2}
     - target: {fileID: 6038414690906536434, guid: 61ad6e9566385c44790f4fd37125ffe4,
         type: 3}
       propertyPath: m_Layer
@@ -2995,7 +3059,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   objetivo: {fileID: 0}
   TileTargetPrefab: {fileID: 0}
-  agente: {fileID: 0}
+  agente: {fileID: 399789604}
+  Is_moving: 0
   isclicked: 0
 --- !u!136 &399789600
 CapsuleCollider:
@@ -3022,11 +3087,63 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &399789602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399789598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54feb0c50e9b2f54a84c4f2c9542176f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dado1: {fileID: 0}
+  PlayerTurn: 0
+  DadosCamera: {fileID: 0}
+  velocidad: 0
+--- !u!136 &399789603
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399789598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.30684805
+  m_Height: 0.7579956
+  m_Direction: 1
+  m_Center: {x: -0.016290188, y: 0.34906006, z: 0}
+--- !u!195 &399789604
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399789598}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &445771407
 GameObject:
   m_ObjectHideFlags: 0
@@ -6277,6 +6394,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c6ff7b0515245459eb62473771052e, type: 3}
+--- !u!1 &1113419476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5929332223479907288, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 6811784526397655020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1113419477
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113419476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 61ad6e9566385c44790f4fd37125ffe4, type: 3}
+  m_Controller: {fileID: 9100000, guid: de469534a01171945855e8d13683ee0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1142635309
 GameObject:
   m_ObjectHideFlags: 0
@@ -6753,7 +6895,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303825124
 GameObject:
@@ -11463,7 +11605,7 @@ PrefabInstance:
     - target: {fileID: 6413944535734049122, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6413944535734049122, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce,
         type: 3}
@@ -11490,5 +11632,10 @@ PrefabInstance:
       propertyPath: objetivo
       value: 
       objectReference: {fileID: 280598925}
+    - target: {fileID: 6811784527158001285, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99d2ef039a4d1fa4c81bed95c3bb74ce, type: 3}
