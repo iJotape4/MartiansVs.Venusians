@@ -14,6 +14,7 @@ public class NavMeshController : MonoBehaviour
     public NavMeshAgent agente;
     private float speed = 20;
     public bool Is_moving = false;
+    private bool is_selected=false;
     private Animator animator;
     private Vector3 posMouse;
     private Vector3 posActual;
@@ -24,7 +25,7 @@ public class NavMeshController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        agente = GetComponent<NavMeshAgent>();
+       // agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
         
@@ -37,12 +38,17 @@ public class NavMeshController : MonoBehaviour
     }
     void Update()
     {   
+        if(!is_selected){
+        OnClickedUnit();
+        }
+             
 
         
         posActual=agente.transform.position;
         if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual) { 
-
-        if (Input.GetMouseButtonDown(0)&& !isclicked){
+            
+      
+        if (Input.GetMouseButtonDown(0)&& !isclicked && is_selected){
         isclicked=true;
         posMouse= new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
@@ -69,6 +75,7 @@ public class NavMeshController : MonoBehaviour
             }
         }else{
                 isclicked=false;
+
             }
 
         }
@@ -84,7 +91,7 @@ public class NavMeshController : MonoBehaviour
         for (int i = 0; i < GameManager.Instance.board.Length; i++)
         {
            float provisional = Vector3.Distance(Tiletarget.transform.position, GameManager.Instance.board[i].transform.position);
-            if(provisional< Nearest  && provisional < Dado.Instance.NumeroActual)
+            if(provisional< Nearest  && provisional < Dado.Instance.NumeroActual && Dado.Instance.NumeroActual>0)
             {
                 Nearest = provisional;
                 NearestObject = GameManager.Instance.board[i];
@@ -102,12 +109,17 @@ private void OnTriggerEnter(Collider other)
             Is_moving = false;
             animator.SetBool("Is_moving", Is_moving);
             GameManager.Instance.NextTurno();
+            is_selected=false;
+            agente=null;
+            
         }
     }
 
     private void OnClickedUnit()
     {
-        if (Input.GetMouseButtonDown(0)){
+
+        if(GameManager.Instance.JugadorActual==1){
+        if (Input.GetMouseButtonDown(1)){
 
                 RaycastHit hit;
 
@@ -118,23 +130,59 @@ private void OnTriggerEnter(Collider other)
                 {
                     for ( int i =0; i < GameManager.Instance.positions.Length; i++)
                 {
-                    if(GameManager.Instance.positions[i].gameObject == hit.transform.gameObject)
-                    {
+                    
                         Debug.Log("You selected the " + hit.transform.name);
                         GameObject test = hit.transform.gameObject;
-                        /*
-                        if (test.LayerMask.NameToLayer("Venusian"))
+                        
+                        if (test.layer==(8))
                         {
-                            
+                        is_selected=true;
+                        agente= test.GetComponent<NavMeshAgent>(); 
+                        break;
+                        }else{
+                            is_selected=false;
                         }
-                        */
-                    }
+                        
+                        
+                    
                 }
                 }
-                
-
+            
                 
         }
+    }else if(GameManager.Instance.JugadorActual==2){
+         if (Input.GetMouseButtonDown(1)){
+
+                RaycastHit hit;
+
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+                
+                if ( Physics.Raycast ( ray, out hit, 100.0f))
+                {
+                    for ( int i =0; i < GameManager.Instance.positions.Length; i++)
+                {
+                    
+                        Debug.Log("You selected the " + hit.transform.name);
+                        GameObject test = hit.transform.gameObject;
+                        Debug.Log(test.name);
+                      if (test.layer==(9))
+                        {
+                            is_selected=true;
+                           agente= test.GetComponent<NavMeshAgent>(); 
+                           break;
+                        }else{
+                            is_selected=false;
+                        }
+                        
+                        
+                    
+                }
+                }
+            
+                
+        }
+    }
     }
 }
 
