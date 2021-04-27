@@ -21,6 +21,30 @@ public class NavMeshController : MonoBehaviour
     public GameObject TileActual;
     List<GameObject> posicionesPosibles;
 
+    public List<int[]> Diagonals = new List<int[]> 
+    {
+       new int[]  {63,  73},
+       new  int[]  { 54, 64, 74 },
+       new  int[]  { 45, 55, 65, 75 },
+       new  int[]  { 36, 46, 56, 66, 76 },
+       new  int[]  { 27, 37, 47, 57, 67, 77 },
+       new  int[]  { 18, 28, 38, 48, 58, 68 , 78 },
+       new  int[]  { 9,19,29,39,49,59,69 ,79 },
+       new  int[]  { 0,10,20,30,40,50,60,70,80 },
+       new  int[]  { 1, 11,21,31,41,51,61,71 },
+       new  int[]   { 2,12,22,32,42,52,62},
+       new  int[]   { 3,13 ,23,43,53 },
+       new  int[]   { 4,14,24,34,44 },
+       new  int[]   { 5,15,25,35},
+       new  int[]   { 6,16,26 },
+       new  int[]   { 7,17}
+    }
+    ;
+
+    }
+     ;
+
+
 
     public bool isclicked = false;
 
@@ -99,6 +123,14 @@ public class NavMeshController : MonoBehaviour
 
                         }
 
+                        //Diagonales Der/Izq
+                        List<GameObject> PosibleDiags1 = CalculateDiagonals(Diagonals, position);
+                        foreach (GameObject e in PosibleDiags1)
+                        {
+                            PosiblePositions.Add(e);
+                        }
+
+
                     }
                     catch { }
                 }
@@ -123,6 +155,27 @@ public class NavMeshController : MonoBehaviour
         return PosiblePositions;
     }
 
+    public List<GameObject> CalculateDiagonals(List<int[]> Diagonals, int position)
+    {
+        List<GameObject> PosibleDiagonals = new List<GameObject>();
+        for (int l = 0; l < Diagonals.Count; l++)
+        {
+            for (int h = 0; h < Diagonals[l].Length; h++)
+            {
+                if (Diagonals[l][h] == position)
+                {
+                    for (int g = 0; g < Diagonals[l].Length; g++)
+                    {
+                        if (Diagonals[l][g] != position)
+                            PosibleDiagonals.Add(GameManager.Instance.positions[Diagonals[l][g]].gameObject);
+                    }
+
+                }
+            }
+        }
+
+        return PosibleDiagonals;
+    }
 
     void Update()
     {
@@ -130,6 +183,8 @@ public class NavMeshController : MonoBehaviour
         {
             OnClickedUnit();
         }
+      
+       
 
 
 
