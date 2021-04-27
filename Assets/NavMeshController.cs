@@ -11,7 +11,7 @@ public class NavMeshController : MonoBehaviour
     public GameObject objetivo;
 
     public GameObject TileTargetPrefab;
-    public static NavMeshAgent agente;
+    public NavMeshAgent agente;
     private float speed = 20;
     public bool Is_moving = false;
     public bool is_selected = false;
@@ -28,7 +28,7 @@ public class NavMeshController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // agente = GetComponent<NavMeshAgent>();
+        agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
 
@@ -151,56 +151,61 @@ public class NavMeshController : MonoBehaviour
                 Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 100.0f))
                 {
-                    for (int i = 0; i <= posicionesPosibles.Count; i++)
-                    {
-                        if (hit.transform.gameObject == posicionesPosibles[i])
+                   //for (int i = 0; i <= posicionesPosibles.Count; i++)
+                    //{
+                        if (posicionesPosibles.IndexOf(hit.transform.gameObject)>-1)
                         {
                             float step = speed * Time.deltaTime;
                             Is_moving = true;
                             animator.SetBool("Is_moving", Is_moving);
+                            
 
                             Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+
 
                             var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
 
                             objetivo = corregirPosition(TileTarget.gameObject);
+                            Camera.main.GetComponent<CameraControl>().GoFinal();
 
                             agente.destination = objetivo.transform.position;
                             transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
                         }
-                    }
+
+                    //}
                     
+
                 }
 
 
                 //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
-              /*  if (Vector3.Distance(posActual, posMouse) < Dado.Instance.NumeroActual + 0.5)
+                /*  if (Vector3.Distance(posActual, posMouse) < Dado.Instance.NumeroActual + 0.5)
 
-                {
-                    isclicked = true;
-                    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-                    if (Physics.Raycast(ray, out RaycastHit RaycastHit))
-                    {
-                        float step = speed * Time.deltaTime;
-                        Is_moving = true;
-                        animator.SetBool("Is_moving", Is_moving);
+                  {
+                      isclicked = true;
+                      Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                      if (Physics.Raycast(ray, out RaycastHit RaycastHit))
+                      {
+                          float step = speed * Time.deltaTime;
+                          Is_moving = true;
+                          animator.SetBool("Is_moving", Is_moving);
 
-                        Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+                          Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
-                        var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
+                          var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
 
-                        objetivo = corregirPosition(TileTarget.gameObject);
-                        // objetivo = TileTarget.gameObject;
+                          objetivo = corregirPosition(TileTarget.gameObject);
+                          // objetivo = TileTarget.gameObject;
 
-                        agente.destination = objetivo.transform.position;
-                        transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
-                    }
-                }
-                else
-                {
-                    isclicked = false;
+                          agente.destination = objetivo.transform.position;
+                          transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
+                      }
+                  }
+                  else
+                  {
+                      isclicked = false;
 
-                } */
+                  } */
 
             }
 
@@ -228,9 +233,9 @@ public class NavMeshController : MonoBehaviour
     //Collision whit a target 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Destino" && Is_moving )
+        if (other.tag == "Destino" && Is_moving)
         {
-            
+
             isclicked = false;
             Is_moving = false;
             is_selected = false;
@@ -239,7 +244,8 @@ public class NavMeshController : MonoBehaviour
 
 
             GameManager.Instance.NextTurno();
-
+             Camera.main.GetComponent<CameraControl>().GoInicial();
+            
         }
 
         if (other.tag == "Tile")
@@ -251,69 +257,31 @@ public class NavMeshController : MonoBehaviour
     //Select a Unit
     private void OnClickedUnit()
     {
+        RaycastHit hit;
 
-        if (GameManager.Instance.JugadorActual == 1)
+
+        if (Input.GetMouseButtonDown(1))
         {
-            if (Input.GetMouseButtonDown(1))
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100.0f))
             {
 
-                RaycastHit hit;
-
-                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-
-                if (Physics.Raycast(ray, out hit, 100.0f))
+                if (hit.transform.gameObject == this.gameObject && (gameObject.layer == (8) && GameManager.Instance.JugadorActual == 1))
                 {
-                    for (int i = 0; i < GameManager.Instance.positions.Length; i++)
-                    {
+                    is_selected = true;
+                    Debug.Log("You selected the " + hit.transform.name);
 
-                        Debug.Log("You selected the " + hit.transform.name);
-                        GameObject test = hit.transform.gameObject;
-
-                        if (test.layer == (8))
-                        {
-                            is_selected = true;
-                            agente = test.GetComponent<NavMeshAgent>();
-
-                        }
-
-                    }
                 }
-            }
-        }
-        else if (GameManager.Instance.JugadorActual == 2)
-        {
-
-            if (Input.GetMouseButtonDown(1))
-            {
-
-                RaycastHit hit;
-
-                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-
-                if (Physics.Raycast(ray, out hit, 100.0f))
+                 else if (hit.transform.gameObject == this.gameObject && (gameObject.layer == (9) && GameManager.Instance.JugadorActual == 2))
                 {
-                    for (int i = 0; i < GameManager.Instance.positions.Length; i++)
-                    {
+                    is_selected = true;
+                    Debug.Log("You selected the " + hit.transform.name);
 
-                        Debug.Log("You selected the " + hit.transform.name);
-                        GameObject test = hit.transform.gameObject;
-                        Debug.Log(test.name);
-                        if (test.layer == (9))
-                        {
-                            is_selected = true;
-
-                            agente = test.GetComponent<NavMeshAgent>();
-
-                        }
-
-                    }
                 }
-
             }
         }
     }
+    
 }
 
 
