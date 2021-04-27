@@ -24,6 +24,7 @@ public class TileTargetPefab : MonoBehaviour
         if (other.tag=="Unit")
         {
             Destroy(this.gameObject);
+            
         }
     }
     
