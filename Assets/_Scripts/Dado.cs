@@ -81,4 +81,11 @@ public class Dado : MonoBehaviour
     {
         return  !GetComponent<Rigidbody>().IsSleeping();
     }
+
+    public void ResetPos()
+    {
+        transform.position = PosInicial;
+        GetComponent<Rigidbody>().isKinematic = true;
+        NumeroActual = 0;
+    }
 }

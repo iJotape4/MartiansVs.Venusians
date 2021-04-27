@@ -19,7 +19,7 @@ public class NavMeshController : MonoBehaviour
     private Vector3 posMouse;
     private Vector3 posActual;
     public GameObject TileActual;
-
+    List<GameObject> posicionesPosibles;
 
 
     public bool isclicked = false;
@@ -138,7 +138,7 @@ public class NavMeshController : MonoBehaviour
         {
 
             //TODO: Toca hacer que no aparezcan las casillas apenas le pasa el turno, sino cuando se selecciona la unidad
-            List<GameObject> posicionesPosibles = CaclularCasillasPosibles();
+            posicionesPosibles = CaclularCasillasPosibles();
 
             if (Input.GetMouseButtonDown(0) && is_selected)
             {
@@ -243,7 +243,10 @@ public class NavMeshController : MonoBehaviour
             animator.SetBool("Is_moving", Is_moving);
 
 
+            Dado.Instance.ResetPos();
+            posicionesPosibles = CaclularCasillasPosibles();
             GameManager.Instance.NextTurno();
+            
              Camera.main.GetComponent<CameraControl>().GoInicial();
             
         }
@@ -260,7 +263,7 @@ public class NavMeshController : MonoBehaviour
         RaycastHit hit;
 
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)  && Dado.Instance.NumeroActual!=0)
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
