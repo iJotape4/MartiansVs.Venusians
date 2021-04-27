@@ -14,6 +14,7 @@ public class Tiles : MonoBehaviour
     public bool UnitHere;
     public bool Vulcanized;
     public int  VulcanoCounter;
+    public bool PosibleMovement;
     void Start()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -61,7 +62,7 @@ public class Tiles : MonoBehaviour
         }
     }
 
-    private void CalculateColoration()
+    public void CalculateColoration()
     {
         for (int i = 0; i < GameManager.Instance.board.Length; i++)
         {
@@ -70,12 +71,14 @@ public class Tiles : MonoBehaviour
             if (!Tile.Vulcanized)
             {
                 //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
-                if (Vector3.Distance(_transform.position, _tilesList[i].transform.position) <= Dado.Instance.NumeroActual+0.5)
+                if (Tile.PosibleMovement)
                 {
+
                 if (Tile.UnitHere && Tile != this)
                     Tile.colorear("CasillaRojaSprite");
                 else
                     Tile.colorear("CasillaGreenSprite");
+
                  }
             else
             {

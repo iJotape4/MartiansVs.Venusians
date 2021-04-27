@@ -14,10 +14,13 @@ public class NavMeshController : MonoBehaviour
     public static NavMeshAgent agente;
     private float speed = 20;
     public bool Is_moving = false;
-    private bool is_selected = false;
+    public bool is_selected = false;
     private Animator animator;
     private Vector3 posMouse;
     private Vector3 posActual;
+    public GameObject TileActual;
+
+
 
     public bool isclicked = false;
 
@@ -32,11 +35,95 @@ public class NavMeshController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void colorear()
+
+    public List<GameObject> CaclularCasillasPosibles()
     {
 
+        List<GameObject> PosiblePositions = new List<GameObject>();
+        int position;
+        for (int i = 0; i < GameManager.Instance.positions.Length; i++)
+        {
+            if (GameManager.Instance.positions[i].gameObject == TileActual)
+            {
+                position = i;
+                int DadoNumber = Dado.Instance.NumeroActual;
+                for (int j = 1; j <= DadoNumber; j++)
 
+                {
+                    try
+                    {
+                        //Casillas a la izquierda
+                        if (((position - (1 * j)) >= 0 && position >= 0 && position < 9) ||
+                            ((position - (1 * j)) >= 9 && position >= 9 && position < 18) ||
+                            ((position - (1 * j)) >= 18 && position >= 18 && position < 27) ||
+                            ((position - (1 * j)) >= 27 && position >= 27 && position < 36) ||
+                            ((position - (1 * j)) >= 36 && position >= 36 && position < 45) ||
+                            ((position - (1 * j)) >= 45 && position >= 45 && position < 54) ||
+                            ((position - (1 * j)) >= 54 && position >= 54 && position < 63) ||
+                            ((position - (1 * j)) >= 63 && position >= 63 && position < 72) ||
+                            ((position - (1 * j)) >= 72 && position >= 72 && position < 80))
+                        {
+                            PosiblePositions.Add(GameManager.Instance.positions[position - (1 * j)].gameObject);
+
+                        }
+
+
+                        //Casillas a la Derecha
+                        if (((position + (1 * j)) < 9 && position >= 0 && position < 9) ||
+                          ((position + (1 * j)) < 18 && position >= 9 && position < 18) ||
+                          ((position + (1 * j)) < 27 && position >= 18 && position < 27) ||
+                          ((position + (1 * j)) < 36 && position >= 27 && position < 36) ||
+                          ((position + (1 * j)) < 45 && position >= 36 && position < 45) ||
+                          ((position + (1 * j)) < 54 && position >= 45 && position < 54) ||
+                          ((position + (1 * j)) < 63 && position >= 54 && position < 63) ||
+                          ((position + (1 * j)) < 72 && position >= 63 && +position < 72) ||
+                          ((position + (1 * j)) < 80 && position >= 72 && position < 80))
+                        {
+                            PosiblePositions.Add(GameManager.Instance.positions[position + (1 * j)].gameObject);
+
+                        }
+
+
+                        //Casillas hacia arriba
+                        if ((position + (1 * j)) <= 80)
+                        {
+                            PosiblePositions.Add(GameManager.Instance.positions[position + (9 * j)].gameObject);
+
+                        }
+
+
+                        //Casillas hacia abajo
+                        if ((position - (9 * j)) >= 0)
+                        {
+                            PosiblePositions.Add(GameManager.Instance.positions[position - (9 * j)].gameObject);
+
+                        }
+
+                    }
+                    catch { }
+                }
+            }
+        }
+
+        for (int i = 0; i < GameManager.Instance.positions.Length; i++)
+        {
+            if (PosiblePositions.Contains(GameManager.Instance.positions[i].gameObject))
+            {
+                GameManager.Instance.positions[i].GetComponent<Tiles>().PosibleMovement = true;
+
+            }
+            else
+            {
+                GameManager.Instance.positions[i].GetComponent<Tiles>().PosibleMovement = false;
+            }
+        }
+
+
+
+        return PosiblePositions;
     }
+
+
     void Update()
     {
         if (!is_selected)
@@ -47,17 +134,47 @@ public class NavMeshController : MonoBehaviour
 
 
         posActual = agente.transform.position;
-        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual)
+        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual && !Is_moving && this.is_selected)
         {
 
+            //TODO: Toca hacer que no aparezcan las casillas apenas le pasa el turno, sino cuando se selecciona la unidad
+            List<GameObject> posicionesPosibles = CaclularCasillasPosibles();
 
-            if (Input.GetMouseButtonDown(0) && !isclicked && is_selected)
+            if (Input.GetMouseButtonDown(0) && is_selected)
             {
 
                 posMouse = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
 
+
+
+                RaycastHit hit;
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 100.0f))
+                {
+                    for (int i = 0; i <= posicionesPosibles.Count; i++)
+                    {
+                        if (hit.transform.gameObject == posicionesPosibles[i])
+                        {
+                            float step = speed * Time.deltaTime;
+                            Is_moving = true;
+                            animator.SetBool("Is_moving", Is_moving);
+
+                            Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+
+                            var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
+
+                            objetivo = corregirPosition(TileTarget.gameObject);
+
+                            agente.destination = objetivo.transform.position;
+                            transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
+                        }
+                    }
+                    
+                }
+
+
                 //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
-                if (Vector3.Distance(posActual, posMouse) < Dado.Instance.NumeroActual + 0.5)
+              /*  if (Vector3.Distance(posActual, posMouse) < Dado.Instance.NumeroActual + 0.5)
 
                 {
                     isclicked = true;
@@ -83,7 +200,7 @@ public class NavMeshController : MonoBehaviour
                 {
                     isclicked = false;
 
-                }
+                } */
 
             }
 
@@ -111,9 +228,9 @@ public class NavMeshController : MonoBehaviour
     //Collision whit a target 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Destino" && isclicked)
+        if (other.tag == "Destino" && Is_moving )
         {
-            Dado.Instance.NumeroActual = 0;
+            
             isclicked = false;
             Is_moving = false;
             is_selected = false;
@@ -123,6 +240,11 @@ public class NavMeshController : MonoBehaviour
 
             GameManager.Instance.NextTurno();
 
+        }
+
+        if (other.tag == "Tile")
+        {
+            TileActual = other.gameObject;
         }
     }
 
