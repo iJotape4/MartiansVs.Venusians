@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -41,6 +42,23 @@ public class NavMeshController : MonoBehaviour
     }
     ;
 
+    public List<int[]> Diagonals2 = new List<int[]>
+    {
+       new int[]  {79,  71},
+       new  int[]  { 78, 70, 62 },
+       new  int[]  { 77, 69, 61, 53 },
+       new  int[]  { 76, 68, 60, 52, 44 },
+       new  int[]  { 75, 67, 59, 51, 43, 35 },
+       new  int[]  { 74, 66, 58, 50, 42, 34 , 26 },
+       new  int[]  { 73,65,57,49,41,33,25 ,17 },
+       new  int[]  { 72,64,56,48,40,32,24,16,8 },
+       new  int[]  { 63, 55,47,39,31,23,15,7 },
+       new  int[]   { 54,46,38,30,22,14,6},
+       new  int[]   { 45,37 ,29,21,13,5 },
+       new  int[]   { 36,28,20,12,4 },
+       new  int[]   { 27,19,11,3},
+       new  int[]   { 18,10,2 },
+       new  int[]   { 9,1}
     }
      ;
 
@@ -125,11 +143,16 @@ public class NavMeshController : MonoBehaviour
 
                         //Diagonales Der/Izq
                         List<GameObject> PosibleDiags1 = CalculateDiagonals(Diagonals, position);
-                        foreach (GameObject e in PosibleDiags1)
+                        foreach (GameObject d1 in PosibleDiags1)
                         {
-                            PosiblePositions.Add(e);
+                            PosiblePositions.Add(d1);
                         }
 
+                        List<GameObject> PosibleDiags2 = CalculateDiagonals(Diagonals2, position);
+                        foreach (GameObject d2 in PosibleDiags2)
+                        {
+                            PosiblePositions.Add(d2);
+                        }
 
                     }
                     catch { }
@@ -158,16 +181,30 @@ public class NavMeshController : MonoBehaviour
     public List<GameObject> CalculateDiagonals(List<int[]> Diagonals, int position)
     {
         List<GameObject> PosibleDiagonals = new List<GameObject>();
+        int posInarray = 0;
         for (int l = 0; l < Diagonals.Count; l++)
         {
             for (int h = 0; h < Diagonals[l].Length; h++)
             {
                 if (Diagonals[l][h] == position)
                 {
-                    for (int g = 0; g < Diagonals[l].Length; g++)
+                    posInarray = Array.IndexOf( Diagonals[l], position)+1;
+                    
+
+                    for (int g = 1; g <= Diagonals[l].Length; g++  )
                     {
-                        if (Diagonals[l][g] != position)
-                            PosibleDiagonals.Add(GameManager.Instance.positions[Diagonals[l][g]].gameObject);
+
+                        if (Diagonals[l][g-1] != position &&  (posInarray-g <= Dado.Instance.NumeroActual)) {
+
+                            if (g > posInarray && g-posInarray <=Dado.Instance.NumeroActual)
+                            {
+                                PosibleDiagonals.Add(GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject);
+                            }
+                            else if ( g < posInarray)
+                            {
+                                PosibleDiagonals.Add(GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject);
+                            }                          
+                        }
                     }
 
                 }
