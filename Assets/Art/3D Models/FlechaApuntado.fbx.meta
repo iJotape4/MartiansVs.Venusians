@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: e3f12d85d07623e408d70bca105d8bf5
+guid: 87c031a4120d71d419a339d20db0e56b
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: -203655887218126122
-    second: mixamo.com
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: parasitezombie_Material
-    second: {fileID: 2100000, guid: 91355de55e05be24b9b0090abd850f50, type: 2}
+      name: Material_70
+    second: {fileID: 2100000, guid: f37465edab70c114093b5a47f3567f3e, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
-    materialSearch: 1
-    materialLocation: 0
+    materialName: 1
+    materialSearch: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -42,7 +39,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 160
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -89,7 +86,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 1.5999999
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -167,13 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2628864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -280,13 +280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &24474710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -798,10 +798,11 @@ MonoBehaviour:
   TileTargetPrefab: {fileID: 7991576216675265654, guid: 41f2279ae8609c24ab42c3fa745fae3d,
     type: 3}
   agente: {fileID: 0}
-  Is_moving: 0
-  is_selected: 0
+  _is_moving: 0
+  _is_selected: 0
+  _is_stuned: 0
+  _isclicked: 0
   TileActual: {fileID: 0}
-  isclicked: 0
 --- !u!54 &50134080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -930,13 +931,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &68441613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1171,13 +1172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &100398372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1284,13 +1285,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &101913943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1397,13 +1398,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &134695185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1510,13 +1511,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &138230192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1623,13 +1624,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &145053310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1736,13 +1737,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &191088011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1803,6 +1804,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191088008}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &191386745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 543450653658291158}
+    m_Modifications:
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 655898141803118836, guid: b35394a24064c6b4295b6d5c19191cf2,
+        type: 3}
+      propertyPath: m_Name
+      value: StunModel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b35394a24064c6b4295b6d5c19191cf2, type: 3}
 --- !u!1 &199176426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,13 +1919,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &199176429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2051,13 +2121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &265204662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2164,13 +2234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &277943160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2277,13 +2347,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &321073380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2390,13 +2460,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &372595892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2869,10 +2939,11 @@ MonoBehaviour:
   TileTargetPrefab: {fileID: 7991576216675265654, guid: 41f2279ae8609c24ab42c3fa745fae3d,
     type: 3}
   agente: {fileID: 0}
-  Is_moving: 0
-  is_selected: 0
+  _is_moving: 0
+  _is_selected: 0
+  _is_stuned: 0
+  _isclicked: 0
   TileActual: {fileID: 0}
-  isclicked: 0
 --- !u!136 &399789600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3007,13 +3078,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &445771410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3239,13 +3310,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &488039947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3352,13 +3423,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &501353854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3894,13 +3965,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &521590601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4007,13 +4078,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &575247960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4120,13 +4191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &581189396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4233,13 +4304,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &648203554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4346,13 +4417,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &660191133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4570,13 +4641,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &705117254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4683,13 +4754,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &705480961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4865,13 +4936,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &738841052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4978,13 +5049,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &742450353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5184,13 +5255,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &771367032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5297,13 +5368,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &784875952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5476,13 +5547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &817183936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5589,13 +5660,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &847674302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5702,13 +5773,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &852900192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5815,13 +5886,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &859396991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5997,13 +6068,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &886124851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6110,13 +6181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &901658118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6223,13 +6294,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &959693360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6336,13 +6407,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &968786523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6449,13 +6520,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &977879357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6562,13 +6633,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1025352909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7187,13 +7258,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1142635312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7300,13 +7371,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1152701797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7413,13 +7484,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1175236478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7526,13 +7597,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1213149821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7669,13 +7740,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1303825127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7782,13 +7853,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1370991086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7895,13 +7966,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1386178064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8008,13 +8079,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1389435730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8121,13 +8192,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1416165867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8234,13 +8305,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1443921800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8347,13 +8418,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1461358133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8539,13 +8610,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1503381458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8652,13 +8723,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1504985429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8765,13 +8836,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1511991998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8947,13 +9018,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1543456947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9060,13 +9131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1555388282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9173,13 +9244,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1562085370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9286,13 +9357,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1565485794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9414,10 +9485,11 @@ MonoBehaviour:
   TileTargetPrefab: {fileID: 7991576216675265654, guid: 41f2279ae8609c24ab42c3fa745fae3d,
     type: 3}
   agente: {fileID: 0}
-  Is_moving: 0
-  is_selected: 0
+  _is_moving: 0
+  _is_selected: 0
+  _is_stuned: 0
+  _isclicked: 0
   TileActual: {fileID: 0}
-  isclicked: 0
 --- !u!136 &1586329409
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9514,13 +9586,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1609838804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9627,13 +9699,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1662508217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9809,13 +9881,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1696770957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9944,13 +10016,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1756932643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10072,10 +10144,11 @@ MonoBehaviour:
   TileTargetPrefab: {fileID: 7991576216675265654, guid: 41f2279ae8609c24ab42c3fa745fae3d,
     type: 3}
   agente: {fileID: 0}
-  Is_moving: 0
-  is_selected: 0
+  _is_moving: 0
+  _is_selected: 0
+  _is_stuned: 0
+  _isclicked: 0
   TileActual: {fileID: 0}
-  isclicked: 0
 --- !u!136 &1774599499
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10172,13 +10245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1835177822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10285,13 +10358,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1905552299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10490,13 +10563,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1926053139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10625,13 +10698,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1954768529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10738,13 +10811,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1960023595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10851,13 +10924,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1964078576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10964,13 +11037,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &1966022522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11077,13 +11150,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2010065393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11190,13 +11263,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2029056516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11303,13 +11376,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2030107348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11416,13 +11489,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2042554902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11529,13 +11602,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2042895200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11642,13 +11715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2048337285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11755,13 +11828,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2052800794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11868,13 +11941,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2059426830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11981,13 +12054,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2062348613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12094,13 +12167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2069293503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12207,13 +12280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2093144647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12320,13 +12393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 1
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2106185540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12508,13 +12581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2136989188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12621,13 +12694,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383e074cff52d0d418e860c8b7ecdec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitHere: 0
+  _posibleMovement: 0
+  _vulcanized: 0
+  _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
   _tilesList: []
-  UnitHere: 0
-  Vulcanized: 0
-  VulcanoCounter: 0
-  PosibleMovement: 0
 --- !u!65 &2143565886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12688,96 +12761,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143565883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &422034564552813587
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 543450653658291158}
-    m_Modifications:
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 167168983881210446, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 655898141803118836, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_Name
-      value: StunModel
-      objectReference: {fileID: 0}
-    - target: {fileID: 655898141803118836, guid: b35394a24064c6b4295b6d5c19191cf2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1806572428149223426, guid: b35394a24064c6b4295b6d5c19191cf2, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: b35394a24064c6b4295b6d5c19191cf2, type: 3}
 --- !u!4 &543450653658291158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eca692e7b9ed9854184f48b6fd22c3a5,

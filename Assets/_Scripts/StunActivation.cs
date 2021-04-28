@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
-[RequireComponent(typeof(NavMeshController))]
+
 public class StunActivation : MonoBehaviour
 {
 
