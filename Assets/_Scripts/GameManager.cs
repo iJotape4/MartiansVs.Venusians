@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public int JugadorActual = 0;
     public int TurnoActual = 1;
     public string Tag;
+    public int isLost =0;
+    public int livesP1=3;
+    public  int livesP2 = 3;
 
     public bool prepareRedTargets, prepareBlueTargets, ThrowFire, ThrowJetPacks, EnableNextFire=false, EnableNextJetPack=false;
     #endregion

@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
 
     #region Inspector Properties
     [SerializeField] Button playAgainButton;
-    [SerializeField] Text gameOverText;
+    [SerializeField]  public Text gameOverText;
 
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject UIcon;
@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
         ActivateUiCon("UiconDices");
         DesaactivateUiCon("UiconAllien");
         DesaactivateUiCon("UiconCasillas");
+        gameOverText.enabled=false;
     }
 
     // Update is called once per frame

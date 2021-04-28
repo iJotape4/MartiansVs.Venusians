@@ -335,6 +335,9 @@ public class NavMeshController : MonoBehaviour
         {
             _is_stuned = true;
         }
+
+
+        
     }
 
     //Select a Unit
@@ -375,6 +378,25 @@ public class NavMeshController : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter(Collision collision){
+
+        if (this.gameObject.layer==(8)&&  collision.gameObject.layer==(9))
+        {
+        
+            Destroy(collision.gameObject);
+           GameManager.Instance.livesP2-=1;
+            
+        }if (this.gameObject.layer==(9)&&  collision.gameObject.layer==(8))
+        {
+             Destroy(collision.gameObject);
+             GameManager.Instance.livesP1-=1;
+        }
+
+
+
+    }
+    
     
 }
 

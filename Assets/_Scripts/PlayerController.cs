@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public int PlayerTurn;
     public Camera DadosCamera;
     public float velocidad;
+
+    //public int lives =3;
     #endregion
 
 
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(LanzarDado());
             }
         }
+        isGameOver();
     }
 
     public IEnumerator LanzarDado()
@@ -85,5 +88,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
+
+        void isGameOver(){
+
+            if (GameManager.Instance.livesP1<1||GameManager.Instance.livesP2<1 )
+            {
+                GameManager.Instance.isLost=PlayerTurn;    
+                GameManager.Instance.NextTurno();
+                UIManager.Instance.gameOverText.enabled=true;
+                UIManager.Instance.gameOverText.text="Player " + PlayerTurn +" Wins "  ;
+                Time.timeScale  =0 ;
+            }
+
+        }
     }
 
