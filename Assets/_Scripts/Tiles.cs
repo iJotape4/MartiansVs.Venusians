@@ -6,20 +6,24 @@ using UnityEngine;
 
 public class Tiles : MonoBehaviour
 {
+    #region Public Properties  
+    public bool _unitHere;
+    public bool _posibleMovement;
+    public bool _vulcanized;
+    public int _vulcanoCounter;
+    #endregion
 
-
+    #region Private Properties
     public MeshRenderer _meshRenderer;
     public Transform _transform;
     public GameObject[] _tilesList;
-    public bool UnitHere;
-    public bool Vulcanized;
-    public int  VulcanoCounter;
-    public bool PosibleMovement;
+    #endregion
+
     void Start()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
         _tilesList = GameManager.Instance.board;
-        UnitHere = false;
+        _unitHere = false;
 
         _transform = GetComponent<Transform>();
     }
@@ -27,16 +31,14 @@ public class Tiles : MonoBehaviour
 
     private void Update()
     {
-        if(VulcanoCounter != 0)
+        if(_vulcanoCounter != 0)
         {
-            if(VulcanoCounter+3 == GameManager.Instance.TurnoActual)
+            if(_vulcanoCounter+3 == GameManager.Instance.TurnoActual)
             {
-                Vulcanized = false;
-                VulcanoCounter = 0;
+                _vulcanized = false;
+                _vulcanoCounter = 0;
             }
-        }
-       
-
+        }       
     }
     void colorear(string color)
     {
@@ -48,16 +50,12 @@ public class Tiles : MonoBehaviour
     {
         if (other.tag == ("Unit"))
         {
-            UnitHere = true;
+            _unitHere = true;
 
             if (other.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual
-                && other.GetComponent<NavMeshController>().isclicked == false)
+                && other.GetComponent<NavMeshController>()._isclicked == false)
             {
                 CalculateColoration();
-            }
-            else
-            {
-
             }
         }
     }
@@ -68,13 +66,13 @@ public class Tiles : MonoBehaviour
         {
             Tiles Tile = _tilesList[i].GetComponent<Tiles>();
 
-            if (!Tile.Vulcanized)
+            if (!Tile._vulcanized)
             {
                 //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
-                if (Tile.PosibleMovement)
+                if (Tile._posibleMovement)
                 {
 
-                if (Tile.UnitHere && Tile != this)
+                if (Tile._unitHere && Tile != this)
                     Tile.colorear("CasillaRojaSprite");
                 else
                     Tile.colorear("CasillaGreenSprite");
@@ -92,8 +90,8 @@ public class Tiles : MonoBehaviour
         if (other.gameObject.layer == 10)
         {
             colorear("Tile");
-            Vulcanized = true;
-            VulcanoCounter = GameManager.Instance.TurnoActual;
+            _vulcanized = true;
+            _vulcanoCounter = GameManager.Instance.TurnoActual;
             //StartCoroutine(Unvulcanization());
         }
     }
@@ -102,7 +100,7 @@ public class Tiles : MonoBehaviour
     {
         if (other.tag == ("Unit"))
         {
-            UnitHere = false;
+            _unitHere = false;
         }
     }
 
@@ -111,7 +109,7 @@ public class Tiles : MonoBehaviour
         int Counter = GameManager.Instance.TurnoActual;
         if(GameManager.Instance.TurnoActual == Counter + 3)
         {
-            Vulcanized = false;
+            _vulcanized = false;
         }
         yield return null;
     }

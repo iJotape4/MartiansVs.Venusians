@@ -16,7 +16,7 @@ public class JetPackTarget : VulcanoTarget
         }
     }
 
-    //Destruye los targets azules cuando un JetPack colisiona con ellos. ESto para evitar que un mismo target se reasigne en otra posición del tablero
+    //Destruye los targets azules cuando un JetPack colisiona con ellos. Esto para evitar que un mismo target se reasigne en otra posición del tablero
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Trowable")

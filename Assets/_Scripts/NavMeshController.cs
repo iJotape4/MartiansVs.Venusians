@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Animator))]
 
 public class NavMeshController : MonoBehaviour
 {
@@ -13,10 +15,10 @@ public class NavMeshController : MonoBehaviour
     public GameObject TileTargetPrefab;
     public NavMeshAgent agente;
 
-    public bool Is_moving = false;
-    public bool is_selected = false;
+    public bool _is_moving = false;
+    public bool _is_selected = false;
     public bool _is_stuned;
-    public bool isclicked = false;
+    public bool _isclicked = false;
 
     public GameObject TileActual;
     #endregion
@@ -31,6 +33,7 @@ public class NavMeshController : MonoBehaviour
 
     #endregion
 
+    #region DiagonalsLists 
     List<int[]> Diagonals = new List<int[]> 
     {
        new int[]  {63,  73},
@@ -71,9 +74,9 @@ public class NavMeshController : MonoBehaviour
     }
      ;
 
+    #endregion
 
 
-    
 
     //public Camera camera;
     // Start is called before the first frame update
@@ -82,8 +85,6 @@ public class NavMeshController : MonoBehaviour
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         mainCamera = Camera.main;
-
-
     }
 
     // Update is called once per frame
@@ -98,7 +99,7 @@ public class NavMeshController : MonoBehaviour
             if (GameManager.Instance.positions[i].gameObject == TileActual)
             {
                 position = i;
-                int DadoNumber = Dado.Instance.NumeroActual;
+                int DadoNumber = Dado.Instance._numeroActual;
                 for (int j = 1; j <= DadoNumber; j++)
                     
                 {
@@ -114,7 +115,7 @@ public class NavMeshController : MonoBehaviour
                             ((position - (1 * j)) >= 54 && position >= 54 && position < 63) ||
                             ((position - (1 * j)) >= 63 && position >= 63 && position < 72) ||
                             ((position - (1 * j)) >= 72 && position >= 72 && position < 80)
-                            &&(!GameManager.Instance.positions[position - (1 * j)].gameObject.GetComponent<Tiles>().Vulcanized) )
+                            &&(!GameManager.Instance.positions[position - (1 * j)].gameObject.GetComponent<Tiles>()._vulcanized) )
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position - (1 * j)].gameObject);
 
@@ -131,7 +132,7 @@ public class NavMeshController : MonoBehaviour
                           ((position + (1 * j)) < 63 && position >= 54 && position < 63) ||
                           ((position + (1 * j)) < 72 && position >= 63 && +position < 72) ||
                           ((position + (1 * j)) < 80 && position >= 72 && position < 80)
-                           && (!GameManager.Instance.positions[position + (1 * j)].gameObject.GetComponent<Tiles>().Vulcanized) )
+                           && (!GameManager.Instance.positions[position + (1 * j)].gameObject.GetComponent<Tiles>()._vulcanized) )
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position + (1 * j)].gameObject);
 
@@ -140,7 +141,7 @@ public class NavMeshController : MonoBehaviour
 
                         //Casillas hacia arriba
                         if ((position + (1 * j)) <= 80
-                    && (!GameManager.Instance.positions[position + (9 * j)].gameObject.GetComponent<Tiles>().Vulcanized))
+                    && (!GameManager.Instance.positions[position + (9 * j)].gameObject.GetComponent<Tiles>()._vulcanized))
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position + (9 * j)].gameObject);
 
@@ -149,7 +150,7 @@ public class NavMeshController : MonoBehaviour
 
                         //Casillas hacia abajo
                         if ((position - (9 * j)) >= 0
-                            && (!GameManager.Instance.positions[position - (9 * j)].gameObject.GetComponent<Tiles>().Vulcanized))
+                            && (!GameManager.Instance.positions[position - (9 * j)].gameObject.GetComponent<Tiles>()._vulcanized))
 
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position - (9 * j)].gameObject);
@@ -175,19 +176,17 @@ public class NavMeshController : MonoBehaviour
             }
         }
 
-        
-        Debug.Log("gh");
 
         for (int i = 0; i < GameManager.Instance.positions.Length; i++)
         {
             if (PosiblePositions.Contains(GameManager.Instance.positions[i].gameObject))
             {
-                GameManager.Instance.positions[i].GetComponent<Tiles>().PosibleMovement = true;
+                GameManager.Instance.positions[i].GetComponent<Tiles>()._posibleMovement = true;
 
             }
             else
             {
-                GameManager.Instance.positions[i].GetComponent<Tiles>().PosibleMovement = false;
+                GameManager.Instance.positions[i].GetComponent<Tiles>()._posibleMovement = false;
             }
         }
 
@@ -212,10 +211,10 @@ public class NavMeshController : MonoBehaviour
                     for (int g = 1; g <= Diagonals[l].Length; g++  )
                     {
 
-                        if (Diagonals[l][g-1] != position &&  (posInarray-g <= Dado.Instance.NumeroActual)
-                            && (!GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject.GetComponent<Tiles>().Vulcanized)) {
+                        if (Diagonals[l][g-1] != position &&  (posInarray-g <= Dado.Instance._numeroActual)
+                            && (!GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject.GetComponent<Tiles>()._vulcanized)) {
 
-                            if (g > posInarray && g-posInarray <=Dado.Instance.NumeroActual )
+                            if (g > posInarray && g-posInarray <=Dado.Instance._numeroActual )
                             {
                                 PosibleDiagonals.Add(GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject);
                             }
@@ -236,7 +235,7 @@ public class NavMeshController : MonoBehaviour
 
     void Update()
     {
-        if (!is_selected)
+        if (!_is_selected)
         {
             OnClickedUnit();
         }
@@ -246,10 +245,10 @@ public class NavMeshController : MonoBehaviour
 
 
         posActual = agente.transform.position;
-        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual && !Is_moving && this.is_selected )
+        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual && !_is_moving && this._is_selected )
         {
 
-            if (Input.GetMouseButtonDown(0) && is_selected)
+            if (Input.GetMouseButtonDown(0) && _is_selected)
             {
 
                 posMouse = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
@@ -263,8 +262,8 @@ public class NavMeshController : MonoBehaviour
                         if (posicionesPosibles.IndexOf(hit.transform.gameObject)>-1)
                         {
                             float step = speed * Time.deltaTime;
-                            Is_moving = true;
-                            animator.SetBool("Is_moving", Is_moving);
+                            _is_moving = true;
+                            animator.SetBool("Is_moving", _is_moving);
                             
 
                             Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
@@ -292,7 +291,7 @@ public class NavMeshController : MonoBehaviour
         for (int i = 0; i < GameManager.Instance.board.Length; i++)
         {
             float provisional = Vector3.Distance(Tiletarget.transform.position, GameManager.Instance.board[i].transform.position);
-            if (provisional < Nearest && provisional < Dado.Instance.NumeroActual && Dado.Instance.NumeroActual > 0)
+            if (provisional < Nearest && provisional < Dado.Instance._numeroActual && Dado.Instance._numeroActual > 0)
             {
                 Nearest = provisional;
                 NearestObject = GameManager.Instance.board[i];
@@ -305,14 +304,14 @@ public class NavMeshController : MonoBehaviour
     //Collision whit a target 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Destino" && Is_moving)
+        if (other.tag == "Destino" && _is_moving)
         {
 
-            isclicked = false;
-            Is_moving = false;
-            is_selected = false;
+            _isclicked = false;
+            _is_moving = false;
+            _is_selected = false;
 
-            animator.SetBool("Is_moving", Is_moving);
+            animator.SetBool("Is_moving", _is_moving);
 
 
             Dado.Instance.ResetPos();
@@ -340,7 +339,7 @@ public class NavMeshController : MonoBehaviour
         RaycastHit hit;
 
 
-        if (Input.GetMouseButtonDown(1)  && Dado.Instance.NumeroActual!=0  && !_is_stuned)
+        if (Input.GetMouseButtonDown(1)  && Dado.Instance._numeroActual!=0  && !_is_stuned)
         {
             
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -349,14 +348,14 @@ public class NavMeshController : MonoBehaviour
 
                 if (hit.transform.gameObject == this.gameObject && (gameObject.layer == (8) && GameManager.Instance.JugadorActual == 1))
                 {
-                    is_selected = true;
+                    _is_selected = true;
                     Debug.Log("You selected the " + hit.transform.name);
                     posicionesPosibles = CaclularCasillasPosibles();
 
                 }
                  else if (hit.transform.gameObject == this.gameObject && (gameObject.layer == (9) && GameManager.Instance.JugadorActual == 2))
                 {
-                    is_selected = true;
+                    _is_selected = true;
                     Debug.Log("You selected the " + hit.transform.name);
                     posicionesPosibles = CaclularCasillasPosibles();
 

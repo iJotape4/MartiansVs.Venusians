@@ -5,10 +5,7 @@
 
 public class VulcanoTarget : MonoBehaviour
 {
-    #region Inspector properties
 
-
-    #endregion
 
     #region Private Properties
     protected SpriteRenderer _spriteRenderer;

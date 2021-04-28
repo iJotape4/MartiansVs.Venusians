@@ -7,14 +7,17 @@ public class Dado : MonoBehaviour
 {   
     public static Dado Instance;
 
-    public cara[] caras;
-    public int NumeroActual;
-    public Vector3 PosInicial;
- 
-    public bool moviendo;
+    #region Inspector Properties  
+    public int _numeroActual;
+    public bool _moviendo;
+    #endregion
 
+    #region Private Properties
+    public cara[] _caras;
+    protected Vector3 _posInicial;
+    #endregion
 
-     private void Awake()
+    private void Awake()
     {
         if (Dado.Instance == null)
         {
@@ -34,9 +37,9 @@ public class Dado : MonoBehaviour
     {
         
         NumeroDado();
-        caras = GetComponentsInChildren<cara>();
+        _caras = GetComponentsInChildren<cara>();
         
-        PosInicial = GetComponent<Dado>().transform.position;
+        _posInicial = GetComponent<Dado>().transform.position;
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
@@ -53,11 +56,11 @@ public class Dado : MonoBehaviour
 
     void NumeroDado()
     {
-        for (int i =0; i<caras.Length; i++)
+        for (int i =0; i<_caras.Length; i++)
         {
-            if (caras[i].TocaSuelo)
+            if (_caras[i].TocaSuelo)
             {
-                NumeroActual = 7 - caras[i].Numero;
+                _numeroActual = 7 - _caras[i].Numero;
             }
         }
         Invoke("NumeroDado", 0.5f);
@@ -68,7 +71,7 @@ public class Dado : MonoBehaviour
     {
         UIManager.Instance.DesaactivateUiCon("UiconDices");
        
-        transform.position = PosInicial;
+        transform.position = _posInicial;
         float FuerzaInicial = Random.Range(-10, 10 );
         float FuerzaInicial2 = Random.Range(10, 10);
         float multplier = Random.Range(20, 20);
@@ -84,8 +87,8 @@ public class Dado : MonoBehaviour
 
     public void ResetPos()
     {
-        transform.position = PosInicial;
+        transform.position = _posInicial;
         GetComponent<Rigidbody>().isKinematic = true;
-        NumeroActual = 0;
+        _numeroActual = 0;
     }
 }

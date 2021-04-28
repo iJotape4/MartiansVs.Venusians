@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class cara : MonoBehaviour
 {
-
+    #region Inspector Properties
     [HideInInspector] public int Numero;
     public bool TocaSuelo;
+    #endregion
 
-        // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
         Numero = int.Parse(GetComponent<cara>().name) ;

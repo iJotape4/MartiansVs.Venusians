@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
+[RequireComponent(typeof(NavMeshController))]
 public class StunActivation : MonoBehaviour
 {
 
@@ -28,7 +29,7 @@ public class StunActivation : MonoBehaviour
         if ( _navMeshController._is_stuned)
         {
             _meshRenderer.enabled = true;
-            CountFinishStun();
+            StartCoroutine(CountFinishStun());
         }
         else
         {
@@ -36,15 +37,13 @@ public class StunActivation : MonoBehaviour
         }
     }
 
-    void CountFinishStun()
+    public IEnumerator CountFinishStun()
     {
-        if (_turnStun == 0)
-            _turnStun = GameManager.Instance.TurnoActual;
-
-        if (GameManager.Instance.TurnoActual == _turnStun + 2) 
-        { 
+        int Counter = GameManager.Instance.TurnoActual;
+        if (GameManager.Instance.TurnoActual == Counter + 2)
+        {
             _navMeshController._is_stuned = false;
-            _turnStun = 0;
         }
+        yield return null;
     }
 }
