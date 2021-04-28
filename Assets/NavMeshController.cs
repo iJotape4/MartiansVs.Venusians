@@ -7,22 +7,31 @@ using UnityEngine.AI;
 
 public class NavMeshController : MonoBehaviour
 {
+    #region Inspector Properties
     [SerializeField] private Camera mainCamera;
-
     public GameObject objetivo;
-
     public GameObject TileTargetPrefab;
     public NavMeshAgent agente;
-    private float speed = 20;
+
     public bool Is_moving = false;
     public bool is_selected = false;
+    public bool _is_stuned;
+    public bool isclicked = false;
+
+    public GameObject TileActual;
+    #endregion
+
+    #region Private Properties
+    private float speed = 20;
+
     private Animator animator;
     private Vector3 posMouse;
     private Vector3 posActual;
-    public GameObject TileActual;
     List<GameObject> posicionesPosibles;
 
-    public List<int[]> Diagonals = new List<int[]> 
+    #endregion
+
+    List<int[]> Diagonals = new List<int[]> 
     {
        new int[]  {63,  73},
        new  int[]  { 54, 64, 74 },
@@ -42,7 +51,7 @@ public class NavMeshController : MonoBehaviour
     }
     ;
 
-    public List<int[]> Diagonals2 = new List<int[]>
+     List<int[]> Diagonals2 = new List<int[]>
     {
        new int[]  {79,  71},
        new  int[]  { 78, 70, 62 },
@@ -64,7 +73,7 @@ public class NavMeshController : MonoBehaviour
 
 
 
-    public bool isclicked = false;
+    
 
     //public Camera camera;
     // Start is called before the first frame update
@@ -72,6 +81,7 @@ public class NavMeshController : MonoBehaviour
     {
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        mainCamera = Camera.main;
 
 
     }
@@ -236,11 +246,8 @@ public class NavMeshController : MonoBehaviour
 
 
         posActual = agente.transform.position;
-        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual && !Is_moving && this.is_selected)
+        if (this.GetComponent<PlayerController>().PlayerTurn == GameManager.Instance.JugadorActual && !Is_moving && this.is_selected )
         {
-
-            //TODO: Toca hacer que no aparezcan las casillas apenas le pasa el turno, sino cuando se selecciona la unidad
-            
 
             if (Input.GetMouseButtonDown(0) && is_selected)
             {
@@ -253,8 +260,6 @@ public class NavMeshController : MonoBehaviour
                 Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 100.0f))
                 {
-                   //for (int i = 0; i <= posicionesPosibles.Count; i++)
-                    //{
                         if (posicionesPosibles.IndexOf(hit.transform.gameObject)>-1)
                         {
                             float step = speed * Time.deltaTime;
@@ -273,42 +278,7 @@ public class NavMeshController : MonoBehaviour
                             agente.destination = objetivo.transform.position;
                             transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
                         }
-
-                    //}
-                    
-
                 }
-
-
-                //El +0.5 es para que pueda tomar las casillas diagonales al clickar en el centro ded ellas
-                /*  if (Vector3.Distance(posActual, posMouse) < Dado.Instance.NumeroActual + 0.5)
-
-                  {
-                      isclicked = true;
-                      Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-                      if (Physics.Raycast(ray, out RaycastHit RaycastHit))
-                      {
-                          float step = speed * Time.deltaTime;
-                          Is_moving = true;
-                          animator.SetBool("Is_moving", Is_moving);
-
-                          Vector3 position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 206.257f, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
-
-                          var TileTarget = Instantiate(TileTargetPrefab, position, Quaternion.identity);
-
-                          objetivo = corregirPosition(TileTarget.gameObject);
-                          // objetivo = TileTarget.gameObject;
-
-                          agente.destination = objetivo.transform.position;
-                          transform.position = Vector3.MoveTowards(transform.position, TileTarget.transform.position, step);
-                      }
-                  }
-                  else
-                  {
-                      isclicked = false;
-
-                  } */
-
             }
 
         }
@@ -357,6 +327,11 @@ public class NavMeshController : MonoBehaviour
         {
             TileActual = other.gameObject;
         }
+
+        if (other.gameObject.layer == 10)
+        {
+            _is_stuned = true;
+        }
     }
 
     //Select a Unit
@@ -365,7 +340,7 @@ public class NavMeshController : MonoBehaviour
         RaycastHit hit;
 
 
-        if (Input.GetMouseButtonDown(1)  && Dado.Instance.NumeroActual!=0)
+        if (Input.GetMouseButtonDown(1)  && Dado.Instance.NumeroActual!=0  && !_is_stuned)
         {
             
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
