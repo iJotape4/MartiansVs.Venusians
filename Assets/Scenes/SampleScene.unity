@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -1813,7 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -5403,13 +5403,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751458200}
-  m_LocalRotation: {x: 0.14641209, y: 0.6917829, z: -0.14641209, w: 0.6917829}
-  m_LocalPosition: {x: 0.57, y: 210.43, z: 0.41}
+  m_LocalRotation: {x: 0.09345819, y: 0.7009034, z: -0.09345819, w: 0.7009034}
+  m_LocalPosition: {x: 0.52, y: 208.3, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 23.9, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.19, y: 90, z: 0}
 --- !u!1 &771367029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6089,7 +6089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -12297,7 +12297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -13201,7 +13201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -13314,7 +13314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
@@ -13879,7 +13879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitHere: 0
   _posibleMovement: 0
-  _vulcanized: 0
+  _vulcanized: 1
   _vulcanoCounter: 0
   _meshRenderer: {fileID: 0}
   _transform: {fileID: 0}
