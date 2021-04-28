@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
         ActivateUiCon("UiconDices");
         DesaactivateUiCon("UiconAllien");
         DesaactivateUiCon("UiconCasillas");
-        gameOverText.enabled=false;
+       // gameOverText.enabled=false;
     }
 
     // Update is called once per frame

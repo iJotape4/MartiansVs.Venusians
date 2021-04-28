@@ -85,6 +85,8 @@ public class NavMeshController : MonoBehaviour
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         mainCamera = Camera.main;
+
+        StartCoroutine(PlayerTurnText("Player " + GameManager.Instance.JugadorActual + " turn !!"));
     }
 
     // Update is called once per frame
@@ -318,6 +320,8 @@ public class NavMeshController : MonoBehaviour
             posicionesPosibles = CaclularCasillasPosibles();
             GameManager.Instance.NextTurno();
 
+            StartCoroutine(PlayerTurnText("Player "+GameManager.Instance.JugadorActual+ " turn !!" ));
+
             UIManager.Instance.DesaactivateUiCon("UiconAllien");
             UIManager.Instance.ActivateUiCon("UiconDices");
             UIManager.Instance.DesaactivateUiCon("UiconCasillas");
@@ -392,12 +396,31 @@ public class NavMeshController : MonoBehaviour
              Destroy(collision.gameObject);
              GameManager.Instance.livesP1-=1;
         }
+    }
 
+    public IEnumerator PlayerTurnText(string Text)
+    {
 
+        UIManager.Instance.gameOverText.fontSize = 60;
+        UIManager.Instance.gameOverText.enabled = true;
+
+        UIManager.Instance.gameOverText.text = (Text);
+        while (UIManager.Instance.gameOverText.fontSize > 2)
+        {
+            UIManager.Instance.gameOverText.fontSize--;
+            yield return new WaitForSeconds(0.02f);
+        }
+        RestoreText();
 
     }
-    
-    
+
+    public void RestoreText()
+    {
+        UIManager.Instance.gameOverText.enabled = false;
+        UIManager.Instance.gameOverText.fontSize = 60;
+    }
+
+
 }
 
 
