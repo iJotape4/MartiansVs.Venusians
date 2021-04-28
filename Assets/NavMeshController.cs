@@ -90,7 +90,7 @@ public class NavMeshController : MonoBehaviour
                 position = i;
                 int DadoNumber = Dado.Instance.NumeroActual;
                 for (int j = 1; j <= DadoNumber; j++)
-
+                    
                 {
                     try
                     {
@@ -103,7 +103,8 @@ public class NavMeshController : MonoBehaviour
                             ((position - (1 * j)) >= 45 && position >= 45 && position < 54) ||
                             ((position - (1 * j)) >= 54 && position >= 54 && position < 63) ||
                             ((position - (1 * j)) >= 63 && position >= 63 && position < 72) ||
-                            ((position - (1 * j)) >= 72 && position >= 72 && position < 80))
+                            ((position - (1 * j)) >= 72 && position >= 72 && position < 80)
+                            &&(!GameManager.Instance.positions[position - (1 * j)].gameObject.GetComponent<Tiles>().Vulcanized) )
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position - (1 * j)].gameObject);
 
@@ -119,7 +120,8 @@ public class NavMeshController : MonoBehaviour
                           ((position + (1 * j)) < 54 && position >= 45 && position < 54) ||
                           ((position + (1 * j)) < 63 && position >= 54 && position < 63) ||
                           ((position + (1 * j)) < 72 && position >= 63 && +position < 72) ||
-                          ((position + (1 * j)) < 80 && position >= 72 && position < 80))
+                          ((position + (1 * j)) < 80 && position >= 72 && position < 80)
+                           && (!GameManager.Instance.positions[position + (1 * j)].gameObject.GetComponent<Tiles>().Vulcanized) )
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position + (1 * j)].gameObject);
 
@@ -127,7 +129,8 @@ public class NavMeshController : MonoBehaviour
 
 
                         //Casillas hacia arriba
-                        if ((position + (1 * j)) <= 80)
+                        if ((position + (1 * j)) <= 80
+                    && (!GameManager.Instance.positions[position + (9 * j)].gameObject.GetComponent<Tiles>().Vulcanized))
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position + (9 * j)].gameObject);
 
@@ -135,7 +138,9 @@ public class NavMeshController : MonoBehaviour
 
 
                         //Casillas hacia abajo
-                        if ((position - (9 * j)) >= 0)
+                        if ((position - (9 * j)) >= 0
+                            && (!GameManager.Instance.positions[position - (9 * j)].gameObject.GetComponent<Tiles>().Vulcanized))
+
                         {
                             PosiblePositions.Add(GameManager.Instance.positions[position - (9 * j)].gameObject);
 
@@ -159,6 +164,9 @@ public class NavMeshController : MonoBehaviour
                 }
             }
         }
+
+        
+        Debug.Log("gh");
 
         for (int i = 0; i < GameManager.Instance.positions.Length; i++)
         {
@@ -194,9 +202,10 @@ public class NavMeshController : MonoBehaviour
                     for (int g = 1; g <= Diagonals[l].Length; g++  )
                     {
 
-                        if (Diagonals[l][g-1] != position &&  (posInarray-g <= Dado.Instance.NumeroActual)) {
+                        if (Diagonals[l][g-1] != position &&  (posInarray-g <= Dado.Instance.NumeroActual)
+                            && (!GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject.GetComponent<Tiles>().Vulcanized)) {
 
-                            if (g > posInarray && g-posInarray <=Dado.Instance.NumeroActual)
+                            if (g > posInarray && g-posInarray <=Dado.Instance.NumeroActual )
                             {
                                 PosibleDiagonals.Add(GameManager.Instance.positions[Diagonals[l][g - 1]].gameObject);
                             }
@@ -206,6 +215,7 @@ public class NavMeshController : MonoBehaviour
                             }                          
                         }
                     }
+
 
                 }
             }
@@ -230,7 +240,7 @@ public class NavMeshController : MonoBehaviour
         {
 
             //TODO: Toca hacer que no aparezcan las casillas apenas le pasa el turno, sino cuando se selecciona la unidad
-            posicionesPosibles = CaclularCasillasPosibles();
+            
 
             if (Input.GetMouseButtonDown(0) && is_selected)
             {
@@ -357,6 +367,7 @@ public class NavMeshController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1)  && Dado.Instance.NumeroActual!=0)
         {
+            
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
@@ -365,12 +376,14 @@ public class NavMeshController : MonoBehaviour
                 {
                     is_selected = true;
                     Debug.Log("You selected the " + hit.transform.name);
+                    posicionesPosibles = CaclularCasillasPosibles();
 
                 }
                  else if (hit.transform.gameObject == this.gameObject && (gameObject.layer == (9) && GameManager.Instance.JugadorActual == 2))
                 {
                     is_selected = true;
                     Debug.Log("You selected the " + hit.transform.name);
+                    posicionesPosibles = CaclularCasillasPosibles();
 
                 }
             }
