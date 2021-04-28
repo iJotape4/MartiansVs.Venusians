@@ -79,6 +79,10 @@ public class PlayerController : MonoBehaviour
         DadosCamera.enabled = false;
         _mainCamera.enabled = true;
 
+        UIManager.Instance.ActivateUiCon("UiconAllien");
+        UIManager.Instance.DesaactivateUiCon("UiconDices");
+        UIManager.Instance.DesaactivateUiCon("UiconCasillas");
+
     }
 
     }

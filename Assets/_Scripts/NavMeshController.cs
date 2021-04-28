@@ -317,9 +317,13 @@ public class NavMeshController : MonoBehaviour
             Dado.Instance.ResetPos();
             posicionesPosibles = CaclularCasillasPosibles();
             GameManager.Instance.NextTurno();
-            
-             Camera.main.GetComponent<CameraControl>().GoInicial();
-            
+
+            UIManager.Instance.DesaactivateUiCon("UiconAllien");
+            UIManager.Instance.ActivateUiCon("UiconDices");
+            UIManager.Instance.DesaactivateUiCon("UiconCasillas");
+
+            Camera.main.GetComponent<CameraControl>().GoInicial();
+       
         }
 
         if (other.tag == "Tile")
@@ -352,6 +356,10 @@ public class NavMeshController : MonoBehaviour
                     Debug.Log("You selected the " + hit.transform.name);
                     posicionesPosibles = CaclularCasillasPosibles();
 
+                    UIManager.Instance.DesaactivateUiCon("UiconAllien");
+                    UIManager.Instance.DesaactivateUiCon("UiconDices");
+                    UIManager.Instance.ActivateUiCon("UiconCasillas");
+
                 }
                  else if (hit.transform.gameObject == this.gameObject && (gameObject.layer == (9) && GameManager.Instance.JugadorActual == 2))
                 {
@@ -359,7 +367,11 @@ public class NavMeshController : MonoBehaviour
                     Debug.Log("You selected the " + hit.transform.name);
                     posicionesPosibles = CaclularCasillasPosibles();
 
-                }
+                    UIManager.Instance.DesaactivateUiCon("UiconAllien");
+                    UIManager.Instance.DesaactivateUiCon("UiconDices");
+                    UIManager.Instance.ActivateUiCon("UiconCasillas");
+
+                }              
             }
         }
     }

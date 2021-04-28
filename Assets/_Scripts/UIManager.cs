@@ -39,7 +39,9 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
+        ActivateUiCon("UiconDices");
+        DesaactivateUiCon("UiconAllien");
+        DesaactivateUiCon("UiconCasillas");
     }
 
     // Update is called once per frame
@@ -62,7 +64,7 @@ public class UIManager : MonoBehaviour
 
     public void ActivateUiCon(string IconName)
     {
-        UIcon = GameObject.Find(IconName);
+        UIcon = GameObject.Find(IconName).gameObject;
         UIcon.gameObject.GetComponent<Image>().enabled =true;
     }
 
@@ -70,5 +72,10 @@ public class UIManager : MonoBehaviour
     {
         UIcon = GameObject.Find(IconName);
         UIcon.gameObject.GetComponent<Image>().enabled = false;
+    }
+
+    public void ChangeUicon(string SpriteName)
+    {
+       // UIcon.sprite = Resources.Load<Sprite>(SpriteName);
     }
 }
